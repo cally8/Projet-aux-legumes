@@ -128,6 +128,15 @@ h2 {
     align-items: center;
 }
 
+h3 {
+    color: black;
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+
 #bloc1 {
     width: 100%;
     height: 50%;
@@ -184,7 +193,7 @@ h2 {
 #bloc3 {
    display: grid; 
    grid-template-rows: auto 1fr; /*la première ajustant sa taille au contenu (auto) , et la deuxième occupant tout l'espace restant (1fr).*/
-   grid-template-columns: repeat(auto-fit, minmax (150px, 1fr)); /* Les produits auront une largeur minimale de 150px et s'adapteront automatiquement à la largeur du conteneur */
+   grid-template-columns: repeat(auto-fill, minmax (150px, 1fr)); /* Permet de remplir autant de colonnes que possible*/
    gap: 10px; /* espace entre les produits*/
    background-color: rgb(165, 192, 165);
 }
@@ -197,16 +206,48 @@ h2 {
 
 .contenu-produits {
     grid-row: 2;
+    display: flex;
+    flex-wrap: wrap; /* Pour que les éléments enfants passent à la ligne s'il n'y a plus de place  */
+    align-items: flex-start;
     overflow: auto;
-    white-space: nowrap;
     width: auto;
 }
 .produit {
-    display: flex;
+    flex: 1 0 calc(25% - 10px); /* 4 colonnes, 10 px entre chaque produits*/
+    box-sizing: border-box; /* pour inclure des bordures et le rembourrage dans le calcul de la largeur*/
     border: 1px solid aliceblue ;
     padding: 10px;
-    margin-right: 10px;
+    margin-bottom: 10px;
     background-color: cadetblue;
+}
+.produit h3 {
+    padding: 20px;
+}
+.produit img {
+    height: 170px;
+    width: 120px; 
+    height: auto; /*Pour maintenir les proportion de l'image*/
+    display: block; /* Pour éliminer l'espace réservé sous l'image */
+    margin: 0 auto;
+}
+
+label {
+    display: inline; /* Afficher les étiquettes sur une même ligne */
+    margin-bottom: 8px; /* Espace entre les étiquettes */
+}
+input[type="number"] {
+    width: 15%; /* Remplir la largeur du conteneur parent */
+    padding: 10px; /* Ajouter un espace intérieur aux champs de saisie */
+    margin-bottom: 16px; /* Espace entre les champs de saisie */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+input[type="submit"] {
+    background-color: aliceblue;
+    color: black;
+    padding: 12px 20px; /* Ajouter de l'espace intérieur au bouton */
+    border: none; /* Supprimer la bordure par défaut du bouton */
+    border-radius: 4px; /* Ajouter des coins arrondis au bouton */
+    cursor: pointer; /* Afficher un curseur pointeur au survol du bouton */
 }
 
 

@@ -65,7 +65,20 @@
             </div>
 
             <div class="contenu-produits">
-                <div class="produit"> Produit 1</div>
+                <div class="produit"> 
+                    <img src="../Images/Tomates.jpg" alt="des tomates">
+
+                    <h3>4 tomates + 1 kg de clémentines</h3>
+
+                    <form action="quantité-produit" method="post"> 
+                        <label for="quantite">Quantité : </label>
+                        <input type="number" name="quantite" id="quantite" min="1" required>
+
+                        <input type="submit" value="Ajouter au panier">
+                    </form>
+
+                    
+                </div>
                 <div class="produit"> Produit 2</div>
                 <div class="produit"> Produit 3</div>
                 <div class="produit"> Produit 4</div>
