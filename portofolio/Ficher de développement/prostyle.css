@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 img {
     width: 25px;
@@ -112,7 +115,7 @@ body{
 
 h1{
     color: aliceblue;
-    font-family: 'Times New Roman', Times, serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 60px;
     text-align: center;
     justify-content: center; 
@@ -121,7 +124,7 @@ h1{
 
 h2 {
     color: black;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Protest Revolution', sans-serif;
     font-size: 50px;
     text-align: center;
     justify-content: center; 
@@ -130,11 +133,21 @@ h2 {
 
 h3 {
     color: black;
-    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    text-align: left;
+    align-items: center;
+    margin: 20px;
+}
+
+h4 {
+    color: black;
+    font-family :'Times New Roman', Times, serif;
+    font-size: 20px;
     text-align: center;
     justify-content: center; 
     align-items: center;
+    padding: 20px;
 }
 
 #bloc1 {
@@ -191,12 +204,18 @@ h3 {
 }
 
 #bloc3 {
-   display: grid; 
-   grid-template-rows: auto 1fr; /*la première ajustant sa taille au contenu (auto) , et la deuxième occupant tout l'espace restant (1fr).*/
-   grid-template-columns: repeat(auto-fill, minmax (150px, 1fr)); /* Permet de remplir autant de colonnes que possible*/
-   gap: 10px; /* espace entre les produits*/
-   background-color: rgb(165, 192, 165);
+    background-color: rgb(184, 210, 184);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    width: 100%;
 }
+#bloc3 .produit {
+    height: 300px;
+    width: 280px;
+}
+
 .titre-bloc {
     grid-row: 1;
 }
@@ -205,30 +224,32 @@ h3 {
 }
 
 .contenu-produits {
-    grid-row: 2;
     display: flex;
-    flex-wrap: wrap; /* Pour que les éléments enfants passent à la ligne s'il n'y a plus de place  */
-    align-items: flex-start;
-    overflow: auto;
-    width: auto;
+    scroll-snap-type: x mandatory;
 }
 .produit {
-    flex: 1 0 calc(25% - 10px); /* 4 colonnes, 10 px entre chaque produits*/
-    box-sizing: border-box; /* pour inclure des bordures et le rembourrage dans le calcul de la largeur*/
-    border: 1px solid aliceblue ;
-    padding: 10px;
-    margin-bottom: 10px;
-    background-color: cadetblue;
-}
-.produit h3 {
-    padding: 20px;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: rgb(185, 220, 188);
+    text-align: center;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 150px; /* Définissez la largeur du produit selon vos besoins */
+    margin-right: 10px; /* Ajoutez de la marge entre les produits */
 }
 .produit img {
-    height: 170px;
-    width: 120px; 
-    height: auto; /*Pour maintenir les proportion de l'image*/
-    display: block; /* Pour éliminer l'espace réservé sous l'image */
-    margin: 0 auto;
+    height: 50%; /* La hauteur de l'image est égale à 100% de la hauteur du conteneur */
+    width: 100%; /* La largeur de l'image est égale à 100% de la largeur du conteneur */
+    object-fit: cover;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border: none;
+}
+.prix {
+    font-weight:  bold;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+
 }
 
 label {
@@ -236,15 +257,16 @@ label {
     margin-bottom: 8px; /* Espace entre les étiquettes */
 }
 input[type="number"] {
-    width: 15%; /* Remplir la largeur du conteneur parent */
-    padding: 10px; /* Ajouter un espace intérieur aux champs de saisie */
-    margin-bottom: 16px; /* Espace entre les champs de saisie */
+    background-color: rgb(217, 237, 255);
+    width: 20%; /* Remplir la largeur du conteneur parent */
+    padding: 5px; /* Ajouter un espace intérieur aux champs de saisie */
+    margin-bottom: 13px; /* Espace entre les champs de saisie */
     box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
 }
 input[type="submit"] {
-    background-color: aliceblue;
+    background-color: rgb(217, 237, 255);
     color: black;
-    padding: 12px 20px; /* Ajouter de l'espace intérieur au bouton */
+    padding: 5px 10px; /* Ajouter de l'espace intérieur au bouton */
     border: none; /* Supprimer la bordure par défaut du bouton */
     border-radius: 4px; /* Ajouter des coins arrondis au bouton */
     cursor: pointer; /* Afficher un curseur pointeur au survol du bouton */
