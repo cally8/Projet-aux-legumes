@@ -116,7 +116,7 @@ body{
 h1{
     color: aliceblue;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
     justify-content: center; 
     align-items: center;
@@ -152,7 +152,7 @@ h4 {
 
 #bloc1 {
     width: 100%;
-    height: 50%;
+    height: 100px;
 
     background-image: url('../Images/Arrière-plan.jpg');
     background-position: center;
@@ -195,11 +195,11 @@ h4 {
     height: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
     border: none;
+    border-radius: 4px;
 }
 /*AJOUTER DES IMAGES ANIMES*/
 .Texte2 {
     max-width: 70%;
-    padding: 10px;
     text-align: justify;
 }
 
@@ -272,6 +272,39 @@ input[type="submit"] {
     cursor: pointer; /* Afficher un curseur pointeur au survol du bouton */
 }
 
+#bloc4 { /*Contenu de la newletter*/
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    text-align: center ;
+}
+.email-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.bouton-abonner {
+    background-color:darkseagreen ; /*Couleur du font du bouton*/
+    color: aliceblue;
+    font-size: 20px; /*taille du texte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /*Ajoute une ombre au bouton*/
+    border: none;
+}
+.bouton-abonner:hover {
+    background-color: rgb(173, 227, 173);
+}
+.newsletter-line { /* Styles pour la ligne de la newsletter */
+    border-top: 2px solid #c9c9c9ee;
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+.newsletter-text { /* Styles pour le texte de la ligne de la newsletter */
+    color: #777777;
+    font-size: 14px;
+}
 
 /*corps*/
 
