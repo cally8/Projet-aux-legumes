@@ -1,8 +1,10 @@
+/* POLICES */
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Protest+Revolution&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
+/*Polices*/
 img {
     width: 25px;
     height: 25px;
@@ -45,7 +47,6 @@ body{
     font-size: 15px;
     display: grid;
     grid-template-columns: repeat(8,1fr);
-    grid-template-rows: repeat(1fr);
     justify-content: space-between; 
     align-content: space-around;
 }
@@ -304,6 +305,75 @@ input[type="submit"] {
 .newsletter-text { /* Styles pour le texte de la ligne de la newsletter */
     color: #777777;
     font-size: 14px;
+}
+
+
+#bloc {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 100px);
+    background-color:rgb(56, 56, 56);
+    background-size: cover;
+    text-align: center ;
+    padding: 20px;
+    /*margin: 15px;*/
+}
+.titre-footer {
+    grid-column: 1/ span 3;
+    align-content: center;
+}
+h5 {
+    color:  #dcdbdbee;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+h6 {
+    color:   #dcdbdbee;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.le-site {
+    grid-column: 1;
+    grid-row: 2/span 2;
+}
+.citation-texte {
+    border-top: 1px solid #dcdbdbee;
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+.le-site p {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+.social-media img {
+    color: #dcdbdbee ;
+    align-content: space-around;
+}
+
+
+.lien-site {
+    grid-column: 2;
+    grid-row: 2/span 2;
+}
+.paragraphe {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+
+.contacter {
+    grid-column: 3;
+    grid-row: 2/span 2;
+}
+
+address div a {
+    color:  #dcdbdbee;
 }
 
 /*corps*/
