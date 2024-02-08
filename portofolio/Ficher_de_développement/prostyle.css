@@ -1,0 +1,393 @@
+/* POLICES */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/*Polices*/
+img {
+    width: 25px;
+    height: 25px;
+}
+
+body{
+    margin: 0; /* Va supprimer tout espace externe autour de l'élement */
+    background-color:aliceblue ;
+    box-sizing: border-box; /*Va modifier la façon dont la largeur et hauteur est organiser. Mais taille reste constant malgré bordure ou ajout contenu */
+    border-width: 0;   /*Supprime totalement la bordure de l'élément */
+    border-style: solid;   /* */
+    border-color: #e5e7eb;   /* */
+
+}
+
+*{
+    margin: 0; /* Permet d'éliminer les espaces inutiles entre les éléments */
+    padding: 0;
+}
+
+/*  EN-TÊTE */
+
+#tete { 
+    height: 70px;
+    width: 100%;  /* en tete occupe toute la latgeur*/
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(165, 192, 165);
+    
+}
+
+#tete a {
+    text-decoration: none; /* Supprime les soulignements des liens */
+}
+
+#onglet {
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-content: space-between; 
+    align-content: space-around;
+}
+
+#onglet a {
+    color: black;
+}
+#onglet a:hover {
+    transform: scale(1.2); /* Augmentez la valeur pour un zoom plus important */
+}
+
+#Logo {
+    margin-left: auto;   /*Pour aligner l'image au centre */
+   /* margin-right: auto;*/
+    
+}
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+#acceuil {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    grid-column: 2/span 4;
+
+}
+.un {
+    padding: 0px;
+}
+
+#panier {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    text-align: center;
+}
+#compte {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+#info {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+}
+
+/*  En-tête */
+
+
+ /*  CORPS */
+
+#container {
+    box-sizing: border-box;
+    border-width: 3px;
+    border-top: 1px;
+    border-bottom: 0;
+    align-content: center;
+}
+
+h1{
+    color: aliceblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+
+h2 {
+    color: black;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+
+h3 {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+    text-align: left;
+    align-items: center;
+    margin: 20px;
+}
+
+h4 {
+    color: black;
+    font-family :'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+}
+
+#bloc1 {
+    width: 100%;
+    height: 100px;
+
+    background-image: url('../Images/Arrière-plan.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    position: relative;
+}
+.bouton {
+    position: absolute; /* positionne le bouton par rapport au conteneur*/
+    top: auto;  /*Place le haut du bouton au milieu du conteneur */
+    transform: translate(-50%, -50%); /* Centre le bouton en ajustant son positionnement */
+
+    background-color:darkseagreen ; /*Couleur du font du bouton*/
+    color: aliceblue;
+    font-size: 20px; /*taille du texte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /*Ajoute une ombre au bouton*/
+    border: none;
+}
+.bouton:hover {
+    background-color: rgb(173, 227, 173);
+}
+
+
+#bloc2 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center; /*centre verticalement le contenu*/
+    background-color: aliceblue;
+}
+.Image2 {
+    max-width: 50%; /*Pour que image ne dépasse pas la largeur du contenu*/
+    max-height: 100%; 
+    height: auto; /*Pour maintenir les proportion de l'image*/
+    display: block; /* Pour éliminer l'espace réservé sous l'image */
+    margin: 0 auto; /* Pour centrer horizontalement l'image dans la colonne */
+}
+.image2 {
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    border: none;
+    border-radius: 4px;
+}
+/*AJOUTER DES IMAGES ANIMES*/
+.Texte2 {
+    max-width: 70%;
+    text-align: justify;
+}
+
+#bloc3 {
+    background-color: rgb(184, 210, 184);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+}
+#bloc3 .produit {
+    height: 300px;
+    width: 280px;
+}
+
+.titre-bloc {
+    grid-row: 1;
+}
+.titre-bloc h2 {
+    text-align: left;
+}
+
+.contenu-produits {
+    display: flex;
+    scroll-snap-type: x mandatory;
+}
+.produit {
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: rgb(185, 220, 188);
+    text-align: center;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 150px; /* Définissez la largeur du produit selon vos besoins */
+    margin-right: 10px; /* Ajoutez de la marge entre les produits */
+}
+.produit img {
+    height: 50%; /* La hauteur de l'image est égale à 100% de la hauteur du conteneur */
+    width: 100%; /* La largeur de l'image est égale à 100% de la largeur du conteneur */
+    object-fit: cover;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border: none;
+}
+.prix {
+    font-weight:  bold;
+    font-size: 1.2em;
+    color: rgb(0, 0, 0);
+    margin-top: auto;
+
+}
+
+label {
+    display: inline; /* Afficher les étiquettes sur une même ligne */
+    margin-bottom: 8px; /* Espace entre les étiquettes */
+}
+input[type="number"] {
+    background-color: rgb(217, 237, 255);
+    width: 20%; /* Remplir la largeur du conteneur parent */
+    padding: 5px; /* Ajouter un espace intérieur aux champs de saisie */
+    margin-bottom: 13px; /* Espace entre les champs de saisie */
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+input[type="submit"] {
+    background-color: rgb(217, 237, 255);
+    color: black;
+    padding: 5px 10px; /* Ajouter de l'espace intérieur au bouton */
+    border: none; /* Supprimer la bordure par défaut du bouton */
+    border-radius: 4px; /* Ajouter des coins arrondis au bouton */
+    cursor: pointer; /* Afficher un curseur pointeur au survol du bouton */
+}
+
+#bloc4 { /*Contenu de la newletter*/
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    align-items: center;
+    text-align: center ;
+}
+.email-input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+.bouton-abonner {
+    background-color:darkseagreen ; /*Couleur du font du bouton*/
+    color: aliceblue;
+    font-size: 20px; /*taille du texte */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1); /*Ajoute une ombre au bouton*/
+    border: none;
+}
+.bouton-abonner:hover {
+    background-color: rgb(173, 227, 173);
+}
+.newsletter-line { /* Styles pour la ligne de la newsletter */
+    border-top: 2px solid #c9c9c9ee;
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+.newsletter-text { /* Styles pour le texte de la ligne de la newsletter */
+    color: #777777;
+    font-size: 14px;
+}
+
+
+#bloc {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 100px);
+    background-color:rgb(56, 56, 56);
+    background-size: cover;
+    text-align: center ;
+    padding: 20px;
+    /*margin: 15px;*/
+}
+.titre-footer {
+    grid-column: 1/ span 3;
+    align-content: center;
+}
+h5 {
+    color:  #dcdbdbee;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+h6 {
+    color:   #dcdbdbee;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.le-site {
+    grid-column: 1;
+    grid-row: 2/span 2;
+}
+.citation-texte {
+    border-top: 1px solid #dcdbdbee;
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+.le-site p {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+.social-media img {
+    color: #dcdbdbee ;
+    align-content: space-around;
+}
+
+
+.lien-site {
+    grid-column: 2;
+    grid-row: 2/span 2;
+}
+.paragraphe {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+
+.contacter {
+    grid-column: 3;
+    grid-row: 2/span 2;
+}
+
+address div a {
+    color:  #dcdbdbee;
+}
+
+/*corps*/
+
+/* PIED*/
+
+#pied{
+    display: flex;
+    height: 50px;
+    width: 100%; /* en tete occupe toute la latgeur*/
+    justify-content: center;   /* Centre horizontalement le contenu */
+    align-items: center;  /* Centre verticalement le contenu */
+    text-align: center; /* Centre le texte horizontalement */
+    background-color: rgb(165, 192, 165);
+}
+
+/*pied*/

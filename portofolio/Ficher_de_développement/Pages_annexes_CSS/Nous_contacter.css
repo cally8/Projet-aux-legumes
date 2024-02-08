@@ -1,0 +1,184 @@
+img {
+    width: 25px;
+    height: 25px;
+}
+
+body{
+    margin: 0; /* Va supprimer tout espace externe autour de l'élement */
+    background-color:aliceblue ;
+    box-sizing: border-box; /*Va modifier la façon dont la largeur et hauteur est organiser. Mais taille reste constant malgré bordure ou ajout contenu */
+    border-width: 0;   /*Supprime totalement la bordure de l'élément */
+    border-style: solid;   /* */
+    border-color: #e5e7eb;   /* */
+
+}
+
+*{
+    margin: 0; /* Permet d'éliminer les espaces inutiles entre les éléments */
+    padding: 0;
+}
+
+/*  EN-TÊTE */
+
+#tete { 
+    height: 70px;
+    width: 100%;  /* en tete occupe toute la latgeur*/
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(165, 192, 165);
+    
+}
+
+#tete a {
+    text-decoration: none; /* Supprime les soulignements des liens */
+}
+
+#onglet {
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-content: space-between; 
+    align-content: space-around;
+}
+
+#onglet a {
+    color: black;
+}
+#onglet a:hover {
+    transform: scale(1.2); /* Augmentez la valeur pour un zoom plus important */
+}
+
+#Logo {
+    margin-left: auto;   /*Pour aligner l'image au centre */
+   /* margin-right: auto;*/
+    
+}
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+#acceuil {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    grid-column: 2/span 4;
+
+}
+.un {
+    padding: 0px;
+}
+
+#panier {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    text-align: center;
+}
+#compte {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+#info {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+}
+
+/*  En-tête */
+
+
+/*CORPS*/
+
+#bloc {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3, 100px);
+    background-color:rgb(56, 56, 56);
+    background-size: cover;
+    text-align: center ;
+    padding: 20px;
+    /*margin: 15px;*/
+}
+.titre-footer {
+    grid-column: 1/ span 3;
+    align-content: center;
+}
+h5 {
+    color:  #dcdbdbee;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+h6 {
+    color:   #dcdbdbee;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.le-site {
+    grid-column: 1;
+    grid-row: 2/span 2;
+}
+.citation-texte {
+    border-top: 1px solid #dcdbdbee;
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+.le-site p {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+.social-media img {
+    color: #dcdbdbee ;
+    align-content: space-around;
+}
+
+
+.lien-site {
+    grid-column: 2;
+    grid-row: 2/span 2;
+}
+.paragraphe {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+
+.contacter {
+    grid-column: 3;
+    grid-row: 2/span 2;
+}
+
+address div a {
+    color:  #dcdbdbee;
+}
+
+/*corps*/
+
+/* PIED*/
+
+#pied{
+    display: flex;
+    height: 50px;
+    width: 100%; /* en tete occupe toute la latgeur*/
+    justify-content: center;   /* Centre horizontalement le contenu */
+    align-items: center;  /* Centre verticalement le contenu */
+    text-align: center; /* Centre le texte horizontalement */
+    background-color: rgb(165, 192, 165);
+}
+
+/*pied*/
