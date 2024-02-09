@@ -8,40 +8,187 @@
 </head>
 <body>
     <header id="tete">
-        <div id="onglet">
-            <div id="Logo">
-                <img class="logo" src="../../Logo_AUX_LEGUMES/pinterest_board_photo_1.png" alt="Logo Aux legumes">
-            </div>
+        <nav>
+            <div id="onglet">
+                <div id="Logo">
+                    <img class="logo" src="../../Logo_AUX_LEGUMES/pinterest_board_photo_1.png" alt="Logo Aux legumes">
+                </div>
 
-            <div id="acceuil">
-                <a target="_blank" class="un" href="../projet.html">ACCEUIL</a>
-                <a target="_blank" class="un" href="./Pages_annexes_HTML/Calendrier-de-saison.html">CALENDRIER DE SAISON</a>
-                <a target="_blank" class="un" href="./Pages_annexes_HTML/Commander.html">COMMANDER</a>
-                <a  class="un" href="#">NOUS CONTACTER</a>
-            </div>
+                <div id="acceuil">
+                    <a class="un" href="../projet.html">ACCEUIL</a>
+                    <a class="un" href="./Pages_annexes_HTML/Calendrier-de-saison.html">CALENDRIER DE SAISON</a>
+                    <a class="un" href="#">COMMANDER</a>
+                    <a class="un" href="./Nous_contacter.html">NOUS CONTACTER</a>
+                </div>
 
-            <div id="panier">
-                <a target="_blank" href="./Pages_annexes_HTML/Panier.html">PANIER
-                <img src="../../Images/cart-shopping-solid.svg" alt="Panier"></a>
-            </div>
+                <div id="panier">
+                    <a href="./Pages_annexes_HTML/Panier.html">PANIER
+                    <img src="../../Images/cart-shopping-solid.svg" alt="Panier"></a>
+                </div>
 
-            <div id="compte">
-                <a target="_blank" href="./Pages_annexes_HTML/Connecter.html">MON COMPTE
-                <img src="../../Images/user-solid.svg" alt="bonhomme"></a>
-            </div>
+                <div id="compte">
+                    <a href="./Pages_annexes_HTML/Connecter.html">MON COMPTE
+                    <img src="../../Images/user-solid.svg" alt="bonhomme"></a>
+                </div>
 
-            <div id="info">
-                <a target="_blank" href="./Pages_annexes_HTML/Plus-d-infos.html">+ INFOS</a>
+                <div id="info">
+                    <a href="./Pages_annexes_HTML/Plus-d-infos.html">+ INFOS</a>
+                </div>    
             </div>
-            
-        </div>
+        </nav> 
     </header>
 
     <main>
+        <section id="main-contenu">
+                <section id="produits">
+                    <div class="bloc">
+                        <img src="../../Images/Avocats.jpg" alt="Avocats">
+                            
+                        <h1>Avocats</h1>
 
+                        <span class="prix"> 0,75 €/pièce  </span>
+                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+                            <!-- <script>
+                                function afficherDetails(nomProduit) {
+                                // Vous pouvez implémenter ici la logique pour afficher les détails du produit
+                                alert('Détails du produit ' + nomProduit);
+                                // Ou vous pourriez ouvrir une boîte de dialogue, charger une page de détails, etc.
+                                }
+                            </script> -->
 
+                        <form action="quantité-produit" method="post"> 
+                            <label for="quantite1"></label>
+                            <input type="number" name="Quantité" class="quantite1"  min="1" required>
+                            <input type="submit" value="Ajouter au panier">
+                        </form>
+
+                    </div>
+
+                    <div class="bloc">
+                        <img src="../../Images/Tomates.jpg" alt="Tomates">
+
+                        <h1>Tomates</h1>
+
+                        <span class="prix"> 3,99 €/kg </span>
+                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+
+                        <form action="quantité-produit" method="post"> 
+                            <label for="quantite2"></label>
+                            <input type="number" name="Quantité" class="quantite2"  min="1" required>
+                            <input type="submit" value="Ajouter au panier">
+                        </form>
+                    </div>
+
+                    <div class="bloc">
+                        <img src="../../Images/Brocolis.jpg" alt="Brocolis">
+
+                        <h1>Brocolis</h1>
+
+                        <span class="prix"> 0,80 €/kg</span>
+                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+
+                        <form action="quantité-produit" method="post"> 
+                            <label for="quantite3"></label>
+                            <input type="number" name="Quantité" id="quantite3"  min="1" required>
+                            <input type="submit" value="Ajouter au panier">
+                        </form>
+                    </div>
+
+                    <div class="bloc">
+                        <img src="../../Images/Raisin.jpg" alt="Raisin">
+
+                        <h1>Raisin</h1>
+
+                        <span class="prix"> 1,25 €/kg </span>
+                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+
+                        <form action="quantité-produit" method="post"> 
+                            <label for="quantite4"></label>
+                            <input type="number" name="Quantité" id="quantite4"  min="1" required>
+                            <input type="submit" value="Ajouter au panier">
+                       </form>
+                    </div>
+
+                    <div class="bloc">
+                        <img src="../../Images/Cougettes.jpg" alt="Courgettes">
+
+                        <h1>Courgettes</h1>
+
+                        <span class="prix"> 0,70 €/pièce</span>
+                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+
+                        <form action="quantité-produit" method="post"> 
+                            <label for="quantite5"></label>    
+                            <input type="number" name="Quantité" id="quantite5"  min="1" required>
+                            <input type="submit" value="Ajouter au panier">
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="bloc">
+                        <img src="../../Images/Patates-douces.jpg" alt="Patates-douces">
+
+                        <h1>Patates douces</h1>
+
+                        <span class="prix"> 0,99 €/kg </span>
+                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+
+                        <form action="quantité-produit" method="post"> 
+                            <label for="quantite6"></label>
+                            <input type="number" name="Quantité" id="quantite6"  min="1" required>
+                            <input type="submit" value="Ajouter au panier">
+                        </form>
+                    </div>
+            </section>
+
+            <article>
+                <h1>Panier de commandes</h1>
+
+                <div id="panier">
+                    <div>
+                        <span>Tomates</span>
+                        <input type="number" id="tomatesQuantite" value="0">
+                        <span>Prix unitaire: 3,99 €/kg </span>
+                    </div>
+
+                    <div>
+                        <span>Brocolis</span>
+                        <input type="number" id="brocolisQuantite" value="0">
+                        <span>Prix unitaire: 0,80 €/kg</span>
+                    </div>
+
+                    <div>
+                        <span>Avocats</span>
+                        <input type="number" id="avocatsQuantite" value="0">
+                        <span>Prix unitaire: 0,75 €/pièces</span>
+                    </div>
+                </div>
+
+                <button onclick="calculerPrixTotal()">Calculer le prix total</button>
+
+                <div id="resultat">
+                    <p>Nombre de produits dans le panier: <span id="nombreProduits">0</span></p>
+                    <p>Prix total du panier: €<span id="prixTotal">0.00</span></p>
+                </div>
+
+                <!-- <script>
+                    function calculerPrixTotal() {
+                        var tomatesQuantite = parseInt(document.getElementById('tomatesQuantite').value);
+                        var brocolisQuantite = parseInt(document.getElementById('brocolisQuantite').value);
+                        var avocatsQuantite = parseInt(document.getElementById('avocatsQuantite').value);
+            
+                        var nombreProduits = tomatesQuantite + brocolisQuantite + avocatsQuantite;
+                        var prixTotal = (tomatesQuantite * 1.5) + (brocolisQuantite * 2.0) + (avocatsQuantite * 1.0);
+            
+                        document.getElementById('nombreProduits').textContent = nombreProduits;
+                        document.getElementById('prixTotal').textContent = prixTotal.toFixed(2);
+                    }
+                </script> -->
+            </article>
+        </section>
         
-        <section id="bloc">
+
+        <section id="bloc-fin">
             <div class="titre-footer">
                 <h5>Le site Aux légumes Bio</h5>
             </div>
