@@ -48,18 +48,21 @@
 
                         <span class="prix"> 0,75 €/pièce  </span>
                         <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
-                            <!-- <script>
-                                function afficherDetails(nomProduit) {
-                                // Vous pouvez implémenter ici la logique pour afficher les détails du produit
-                                alert('Détails du produit ' + nomProduit);
-                                // Ou vous pourriez ouvrir une boîte de dialogue, charger une page de détails, etc.
-                                }
-                            </script> -->
+                            <div class="culture" id="laCulture1">
+                                <div class="contenuCulture">
+                                    <p>
+                                        L'avocat : COUPE-FAIM <br>
+                                        Il fournit des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
+                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit1')" >Fermer</button>
+                                </div>
+                            </div>
 
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite1"></label>
                             <input type="number" name="Quantité" class="quantite1"  min="1" required>
-                            <input type="submit" value="Ajouter au panier">
+                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
                         </form>
 
                     </div>
@@ -70,12 +73,23 @@
                         <h1>Tomates</h1>
 
                         <span class="prix"> 3,99 €/kg </span>
-                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+                        <button onclick="afficherDetails('produit2')">Le saviez-vous ?</button>
+                            <div class="culture" id="laCulture2">
+                                <div class="contenuCulture">
+                                    <p>
+                                        La tomate : TOP POUR LA LIGNE <br>
+                                        C'est un fruit pauvre en glucide et riche en eau, c'est donc un véritable allié minceur en plus de l'hydratation et l'élimination des toxines qu'elle procure.<br>
+                                        Riche en lycopène, un puissant antioxydant qui aide à lutter contre le veillissement de la peau et des maladies diverses. <br>
+                                        Conservez-la à température ambiante. ceuillie trop tôt et conservé au frais les rendent farineuse et sans gout. alors respecter la saison estivale ou elle sont plus juteuse et parfumée.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit2')" >Fermer</button>
+                                </div>
+                            </div>
 
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite2"></label>
                             <input type="number" name="Quantité" class="quantite2"  min="1" required>
-                            <input type="submit" value="Ajouter au panier">
+                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
                         </form>
                     </div>
 
@@ -85,12 +99,22 @@
                         <h1>Brocolis</h1>
 
                         <span class="prix"> 0,80 €/kg</span>
-                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+                        <button onclick="afficherDetails('produit3')">Le saviez-vous ?</button>
+                            <div class="culture" id="laCulture">
+                                <div class="contenuCulture">
+                                    <p>
+                                        L'avocat : COUPE-FAIM <br>
+                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
+                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit3')" >Fermer</button>
+                                </div>
+                            </div>
 
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite3"></label>
                             <input type="number" name="Quantité" id="quantite3"  min="1" required>
-                            <input type="submit" value="Ajouter au panier">
+                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
                         </form>
                     </div>
 
@@ -100,12 +124,22 @@
                         <h1>Raisin</h1>
 
                         <span class="prix"> 1,25 €/kg </span>
-                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+                        <button onclick="afficherDetails('produit4')">Le saviez-vous ?</button>
+                            <div class="culture" id="laCulture4">
+                                <div class="contenuCulture">
+                                    <p>
+                                        L'avocat : COUPE-FAIM <br>
+                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
+                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit4')" >Fermer</button>
+                                </div>
+                            </div>
 
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite4"></label>
                             <input type="number" name="Quantité" id="quantite4"  min="1" required>
-                            <input type="submit" value="Ajouter au panier">
+                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
                        </form>
                     </div>
 
@@ -115,12 +149,22 @@
                         <h1>Courgettes</h1>
 
                         <span class="prix"> 0,70 €/pièce</span>
-                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+                        <button onclick="afficherDetails('produit5')">Le saviez-vous ?</button>
+                            <div class="culture" id="laCulture5">
+                                <div class="contenuCulture">
+                                    <p>
+                                        L'avocat : COUPE-FAIM <br>
+                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
+                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit5')" >Fermer</button>
+                                </div>
+                            </div>
 
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite5"></label>    
                             <input type="number" name="Quantité" id="quantite5"  min="1" required>
-                            <input type="submit" value="Ajouter au panier">
+                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
                             </form>
                         </div>
                     </div>
@@ -131,60 +175,36 @@
                         <h1>Patates douces</h1>
 
                         <span class="prix"> 0,99 €/kg </span>
-                        <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
+                        <button onclick="afficherDetails('produit6')">Le saviez-vous ?</button>
+                           <div class="culture" id="laCulture6">
+                                <div class="contenuCulture">
+                                    <p>
+                                        L'avocat : COUPE-FAIM <br>
+                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
+                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit6')" >Fermer</button>
+                                </div>
+                            </div>
 
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite6"></label>
                             <input type="number" name="Quantité" id="quantite6"  min="1" required>
-                            <input type="submit" value="Ajouter au panier">
+                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
                         </form>
                     </div>
             </section>
 
             <article>
-                <h1>Panier de commandes</h1>
-
                 <div id="panier">
-                    <div>
-                        <span>Tomates</span>
-                        <input type="number" id="tomatesQuantite" value="0">
-                        <span>Prix unitaire: 3,99 €/kg </span>
-                    </div>
-
-                    <div>
-                        <span>Brocolis</span>
-                        <input type="number" id="brocolisQuantite" value="0">
-                        <span>Prix unitaire: 0,80 €/kg</span>
-                    </div>
-
-                    <div>
-                        <span>Avocats</span>
-                        <input type="number" id="avocatsQuantite" value="0">
-                        <span>Prix unitaire: 0,75 €/pièces</span>
-                    </div>
+                    <h2>Panier</h2>
+                    <ul id="listePanier"></ul>
                 </div>
-
-                <button onclick="calculerPrixTotal()">Calculer le prix total</button>
-
-                <div id="resultat">
-                    <p>Nombre de produits dans le panier: <span id="nombreProduits">0</span></p>
-                    <p>Prix total du panier: €<span id="prixTotal">0.00</span></p>
-                </div>
-
-                <!-- <script>
-                    function calculerPrixTotal() {
-                        var tomatesQuantite = parseInt(document.getElementById('tomatesQuantite').value);
-                        var brocolisQuantite = parseInt(document.getElementById('brocolisQuantite').value);
-                        var avocatsQuantite = parseInt(document.getElementById('avocatsQuantite').value);
-            
-                        var nombreProduits = tomatesQuantite + brocolisQuantite + avocatsQuantite;
-                        var prixTotal = (tomatesQuantite * 1.5) + (brocolisQuantite * 2.0) + (avocatsQuantite * 1.0);
-            
-                        document.getElementById('nombreProduits').textContent = nombreProduits;
-                        document.getElementById('prixTotal').textContent = prixTotal.toFixed(2);
-                    }
-                </script> -->
             </article>
+
+            <script src="../proscript.js"></script>
+
+
         </section>
         
 
@@ -258,9 +278,8 @@
                 </div>
             </div>
         </section>
-
-
     </main>
+
 
     <footer id="pied">
         <small>

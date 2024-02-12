@@ -94,6 +94,17 @@ body{
 
 }
 
+h2 {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 15px;
+    text-align:justify;
+    align-items: center;
+    margin: 10px
+}
+
+
+
 /*  En-tête */
 
 /*CONTENUS*/
@@ -108,18 +119,18 @@ h1 {
 
 #main-contenu {
     width:100%;
-    height: fit-content;
+    height: 50%;
     display: grid;
-    grid-template-columns: repeat(2,85% 15%);
+    grid-template-columns: 3fr 1fr; /* la premiere colonne est 3x plus large que la deuxième */
+    gap: 20px;
+    overflow-y: scroll;
 
 }
 
 #produits {
-    width: 100%;
-    height: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,1fr);
+    grid-template-rows: repeat(2,400px); 
     gap: 10px;
     justify-content: space-between;
     align-content: space-around;
@@ -127,31 +138,25 @@ h1 {
     background-size: cover;
 }
 
-article {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(209, 215, 204);
-    background-size: cover;
-}
 
 .bloc {
     background-color: aliceblue;
+    padding: 10px;
     color: black;
     font-size: 1.5em;
     align-items: center;
     text-align: center;
+    white-space:inherit;
 }
 .bloc img {
+    display: block;
     padding-top: 10px;
-    height: 50%;
-    width: 80%; 
+    height:50%;
+    width: 100%; 
     object-fit: cover;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
     border: none;
-    display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 
 }
 
@@ -171,6 +176,57 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+/* LE SAVIEZ-VOUS*/
+.culture {
+    display:none;
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenuCulture {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.5em;
+    
+}
+/*Le saviez-vous*/
+
+article {
+    flex: 2;
+    max-width: 100%;
+    max-height: 100%;
+    margin:auto auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.ajouterAuPanier {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#panier {
+    max-width: 100%;
+    margin:auto auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+#listePanier {
+    list-style-type:square;
+    padding: 0;
+}
+
 
 
 
@@ -182,7 +238,7 @@ input[type="submit"] {
 #bloc-fin {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-rows: repeat(1, 100px);
     background-color:rgb(56, 56, 56);
     background-size: cover;
     text-align: center ;
