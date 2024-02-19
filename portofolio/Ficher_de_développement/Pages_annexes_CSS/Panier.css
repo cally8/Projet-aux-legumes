@@ -98,6 +98,31 @@ body{
 
 /*CORPS*/
 
+/*Panier*/ 
+.panier {
+    position: relative;
+    text-align: right;
+}
+.quantité {
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: aqua;
+    position: absolute;
+    top: -50px;
+    left: 80%;
+    padding: 3px 10px;
+}
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 50px;
+}
+
 #bloc {
     display: grid;
     grid-template-columns: repeat(3,1fr);

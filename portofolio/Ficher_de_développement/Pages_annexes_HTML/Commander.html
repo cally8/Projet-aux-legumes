@@ -21,9 +21,11 @@
                     <a class="un" href="./Nous_contacter.html">NOUS CONTACTER</a>
                 </div>
 
-                <div id="panier">
+                <div id="panier" class="shopping">
                     <a href="./Pages_annexes_HTML/Panier.html">PANIER
                     <img src="../../Images/cart-shopping-solid.svg" alt="Panier"></a>
+                    <span class="quantité">0</span>
+                    <div class="list"></div>    
                 </div>
 
                 <div id="compte">
@@ -41,9 +43,9 @@
     <main>
         <section id="main-contenu">
                 <section id="produits">
-                    <div class="bloc">
-                        <img src="../../Images/Avocats.jpg" alt="Avocats">
-                            
+                    <div class="bloc" id="produit1">
+                        <img src="../../Images/Avocats.jpg" alt="Avocats"> 
+                        
                         <h1>Avocats</h1>
 
                         <span class="prix"> 0,75 €/pièce  </span>
@@ -62,12 +64,12 @@
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite1"></label>
                             <input type="number" name="Quantité" class="quantite1"  min="1" required>
-                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
+                            <button onclick="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value))">Ajouter au panier</button>
                         </form>
 
                     </div>
 
-                    <div class="bloc">
+                    <div class="bloc" id="produit2">
                         <img src="../../Images/Tomates.jpg" alt="Tomates">
 
                         <h1>Tomates</h1>
@@ -89,7 +91,7 @@
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite2"></label>
                             <input type="number" name="Quantité" class="quantite2"  min="1" required>
-                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
+                            <button onclick="ajouterAuPanier('produit2', parseInt(document.querySelector('.quantite2').value))">Ajouter au panier</button>
                         </form>
                     </div>
 
@@ -100,12 +102,12 @@
 
                         <span class="prix"> 0,80 €/kg</span>
                         <button onclick="afficherDetails('produit3')">Le saviez-vous ?</button>
-                            <div class="culture" id="laCulture">
+                            <div class="culture" id="laCulture3">
                                 <div class="contenuCulture">
                                     <p>
-                                        L'avocat : COUPE-FAIM <br>
-                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
-                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                        Le brocoli : BON POUR LES YEUX <br>
+                                        Ce légume renferme 5 fois plus de calcium que le chou-fleur. Indiqué en prévention des maladies cardiovasculaire et de certains cancers, il est aussi bénefique pour la santé des yeux car il renferme de la lutéine et du zéaxanthine, réputées pour baisser le risque de dégénérescence maculaire lié à l'âge.<br>
+                                        Les fleurettes que l'on consomme sont en réalités des boutons floraux qui diuvent petre d'un vert uniforme, bien serrés et charnus. Consommez le brocoli dans les 4 jours suivant son achat et faite-le cuire à l'eau bouilllante, rôti au four ou mieux, à la vapeur pour préserver l'aliment. <br>
                                     </p>
                                     <button onclick="fermerLeContenu('produit3')" >Fermer</button>
                                 </div>
@@ -114,11 +116,11 @@
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite3"></label>
                             <input type="number" name="Quantité" id="quantite3"  min="1" required>
-                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
+                            <button onclick="ajouterAuPanier('produit3', parseInt(document.querySelector('.quantite3').value))">Ajouter au panier</button>
                         </form>
                     </div>
 
-                    <div class="bloc">
+                    <div class="bloc" id="produit4">
                         <img src="../../Images/Raisin.jpg" alt="Raisin">
 
                         <h1>Raisin</h1>
@@ -128,9 +130,9 @@
                             <div class="culture" id="laCulture4">
                                 <div class="contenuCulture">
                                     <p>
-                                        L'avocat : COUPE-FAIM <br>
-                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
-                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                        Le raisin : SOURCE DE POLYPHENOLS <br>
+                                        Ils sont une excellente source d'antioxydants, tels que les polyphénols, qui contribuent à la prévention des maladies cardiovasculaires et au ralentissement du processus de vieillissement cellulaire. La richesse en fibres des raisins favorise une digestion saine, tout en régulant le taux de sucre dans le sang. Ces petits fruits sont également connus pour leurs propriétés anti-inflammatoires, bénéfiques pour la santé articulaire.<br>
+                                        Pour conserver au mieux les raisins, il est essentiel de les stocker au réfrigérateur dans un sac perforé afin de maintenir une humidité adéquate. Il est recommandé de les laver juste avant de les consommer pour éviter l'humidité excessive, qui pourrait accélérer la détérioration. Les raisins peuvent également être congelés pour une conservation à plus long terme, idéale pour les smoothies ou les collations rafraîchissantes. Ainsi, en intégrant les raisins à une alimentation équilibrée et en suivant des pratiques de conservation appropriées, on peut profiter pleinement de leurs bienfaits pour la santé.
                                     </p>
                                     <button onclick="fermerLeContenu('produit4')" >Fermer</button>
                                 </div>
@@ -139,7 +141,7 @@
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite4"></label>
                             <input type="number" name="Quantité" id="quantite4"  min="1" required>
-                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
+                            <button onclick="ajouterAuPanier('produit4', parseInt(document.querySelector('.quantite4').value))">Ajouter au panier</button>
                        </form>
                     </div>
 
@@ -153,20 +155,19 @@
                             <div class="culture" id="laCulture5">
                                 <div class="contenuCulture">
                                     <p>
-                                        L'avocat : COUPE-FAIM <br>
-                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
-                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                        La cougette : EXCELLENT DIURETIQUE<br>
+                                        Les courgettes, riches en nutriments et faibles en calories, leur contenu élevé en fibres favorise la digestion et contribue au maintien d'un poids corporel sain. Les courgettes sont également une source importante de vitamines, notamment la vitamine C, qui renforce le système immunitaire, et la vitamine A, bénéfique pour la santé des yeux. De plus, elles sont riches en antioxydants aux propriétés anti-inflammatoires, favorisant ainsi la santé cardiovasculaire.<br>
+                                        Pour conserver au mieux les courgettes, il est recommandé de les stocker dans le bac à légumes du réfrigérateur. Elles sont sensibles à l'humidité, il est donc préférable de les conserver dans un sac en plastique perforé. Les courgettes peuvent également être congelées après avoir été blanchies, ce qui les rend pratiques pour une utilisation ultérieure dans des plats cuisinés. En incorporant régulièrement des courgettes dans son alimentation et en suivant des méthodes de conservation appropriées, on peut profiter pleinement de leurs bienfaits pour la santé.
                                     </p>
                                     <button onclick="fermerLeContenu('produit5')" >Fermer</button>
                                 </div>
                             </div>
 
-                        <form action="quantité-produit" method="post"> 
-                            <label for="quantite5"></label>    
-                            <input type="number" name="Quantité" id="quantite5"  min="1" required>
-                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
+                            <form action="quantité-produit" method="post"> 
+                                <label for="quantite5"></label>    
+                                <input type="number" name="Quantité" id="quantite5"  min="1" required>
+                                <button onclick="ajouterAuPanier('produit5', parseInt(document.querySelector('.quantite5').value))">Ajouter au panier</button>
                             </form>
-                        </div>
                     </div>
 
                     <div class="bloc">
@@ -179,9 +180,9 @@
                            <div class="culture" id="laCulture6">
                                 <div class="contenuCulture">
                                     <p>
-                                        L'avocat : COUPE-FAIM <br>
-                                        Il fournisse des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
-                                        La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
+                                        La patate douce : BON POUR LA DIGESTION <br>
+                                        La patate douce est une source exceptionnelle de nutriments, offrant des avantages pour la santé. Elle est riche en vitamine A, essentielle pour la vision, et en antioxydants qui renforcent le système immunitaire. Sa haute teneur en fibres favorise également une digestion saine. <br>
+                                        Pour une conservation optimale, il est recommandé de conserver les patates douces dans un endroit frais, sombre et bien ventilé, évitant ainsi la réfrigération qui peut altérer leur texture. En intégrant régulièrement la patate douce dans son alimentation et en respectant les bonnes pratiques de conservation, on peut profiter de ses nombreux bienfaits nutritionnels.
                                     </p>
                                     <button onclick="fermerLeContenu('produit6')" >Fermer</button>
                                 </div>
@@ -190,17 +191,21 @@
                         <form action="quantité-produit" method="post"> 
                             <label for="quantite6"></label>
                             <input type="number" name="Quantité" id="quantite6"  min="1" required>
-                            <input class="ajouterAuPanier" type="submit" value="Ajouter au panier">
+                            <button onclick="ajouterAuPanier('produit6', parseInt(document.querySelector('.quantite6').value))">Ajouter au panier</button>
+                            <!-- <input class="ajouterAuPanier" type="submit" value="Ajouter au panier"> -->
                         </form>
+                        
                     </div>
             </section>
 
-            <article>
-                <div id="panier">
-                    <h2>Panier</h2>
-                    <ul id="listePanier"></ul>
+            <div class="Panier">
+                <h1>Panier</h1>
+                <ul class="listPanier"></ul>
+                <div class="checkout">
+                    <div class="total">0</div>
+                    <div class="fermerShopping">Fermer</div>
                 </div>
-            </article>
+            </div>
 
             <script src="../proscript.js"></script>
 
