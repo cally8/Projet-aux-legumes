@@ -61,10 +61,10 @@
                                 </div>
                             </div>
 
-                        <form action="quantité-produit" method="post"> 
+                        <form onsubmit="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value)); return false;" method="post"> 
                             <label for="quantite1"></label>
                             <input type="number" name="Quantité" class="quantite1"  min="1" required>
-                            <button onclick="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value))">Ajouter au panier</button>
+                            <button type="submit">Ajouter au panier</button>
                         </form>
 
                     </div>
@@ -88,14 +88,14 @@
                                 </div>
                             </div>
 
-                        <form action="quantité-produit" method="post"> 
+                        <form onsubmit="ajouterAuPanier('produit2', parseInt(document.querySelector('.quantite2').value)); return false;" method="post"> 
                             <label for="quantite2"></label>
                             <input type="number" name="Quantité" class="quantite2"  min="1" required>
-                            <button onclick="ajouterAuPanier('produit2', parseInt(document.querySelector('.quantite2').value))">Ajouter au panier</button>
+                            <button type="submit">Ajouter au panier</button>
                         </form>
                     </div>
 
-                    <div class="bloc">
+                    <div class="bloc" id="produit3">
                         <img src="../../Images/Brocolis.jpg" alt="Brocolis">
 
                         <h1>Brocolis</h1>
@@ -113,10 +113,10 @@
                                 </div>
                             </div>
 
-                        <form action="quantité-produit" method="post"> 
+                        <form onsubmit="ajouterAuPanier('produit3', parseInt(document.querySelector('.quantite3').value)); return false;" method="post"> 
                             <label for="quantite3"></label>
                             <input type="number" name="Quantité" id="quantite3"  min="1" required>
-                            <button onclick="ajouterAuPanier('produit3', parseInt(document.querySelector('.quantite3').value))">Ajouter au panier</button>
+                            <button type="submit">Ajouter au panier</button>
                         </form>
                     </div>
 
@@ -138,14 +138,14 @@
                                 </div>
                             </div>
 
-                        <form action="quantité-produit" method="post"> 
+                        <form onsubmit="ajouterAuPanier('produit4', parseInt(document.querySelector('.quantite4').value)); return false;" method="post"> 
                             <label for="quantite4"></label>
                             <input type="number" name="Quantité" id="quantite4"  min="1" required>
-                            <button onclick="ajouterAuPanier('produit4', parseInt(document.querySelector('.quantite4').value))">Ajouter au panier</button>
+                            <button type="submit">Ajouter au panier</button>
                        </form>
                     </div>
 
-                    <div class="bloc">
+                    <div class="bloc" id="produit5">
                         <img src="../../Images/Cougettes.jpg" alt="Courgettes">
 
                         <h1>Courgettes</h1>
@@ -163,14 +163,14 @@
                                 </div>
                             </div>
 
-                            <form action="quantité-produit" method="post"> 
+                            <form onsubmit="ajouterAuPanier('produit5', parseInt(document.querySelector('.quantite5').value)); return false;" method="post"> 
                                 <label for="quantite5"></label>    
                                 <input type="number" name="Quantité" id="quantite5"  min="1" required>
-                                <button onclick="ajouterAuPanier('produit5', parseInt(document.querySelector('.quantite5').value))">Ajouter au panier</button>
+                                <button type="submit">Ajouter au panier</button>
                             </form>
                     </div>
 
-                    <div class="bloc">
+                    <div class="bloc" id="produit6">
                         <img src="../../Images/Patates-douces.jpg" alt="Patates-douces">
 
                         <h1>Patates douces</h1>
@@ -188,11 +188,10 @@
                                 </div>
                             </div>
 
-                        <form action="quantité-produit" method="post"> 
+                        <form onsubmit="ajouterAuPanier('produit6', parseInt(document.querySelector('.quantite6').value)); return false;" method="post"> 
                             <label for="quantite6"></label>
                             <input type="number" name="Quantité" id="quantite6"  min="1" required>
-                            <button onclick="ajouterAuPanier('produit6', parseInt(document.querySelector('.quantite6').value))">Ajouter au panier</button>
-                            <!-- <input class="ajouterAuPanier" type="submit" value="Ajouter au panier"> -->
+                            <button type="submit">Ajouter au panier</button>
                         </form>
                         
                     </div>

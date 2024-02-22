@@ -99,7 +99,7 @@ body{
 
 /*CORPS*/
 
-#bloc {
+#bloc-fin {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3, 100px);

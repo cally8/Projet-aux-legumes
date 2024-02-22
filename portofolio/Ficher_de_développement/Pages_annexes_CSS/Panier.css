@@ -101,7 +101,7 @@ body{
 /*Panier*/ 
 .panier {
     position: relative;
-    text-align: right;
+    text-align: right; 
 }
 .quantité {
     background-color: aliceblue;
@@ -109,11 +109,9 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    color: aqua;
-    position: absolute;
     top: -50px;
     left: 80%;
-    padding: 3px 10px;
+    padding: 3px 10px; 
 }
 .list {
     display: grid;
@@ -123,7 +121,7 @@ body{
     margin-top: 50px;
 }
 
-#bloc {
+#bloc-fin {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3, 100px);

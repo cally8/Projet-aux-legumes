@@ -88,6 +88,16 @@ body{
     align-items: center; /* Centre verticalement le contenu */
     text-align: center;
 }
+.quantité {
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    top: -50px;
+    left: 80%;
+    padding: 3px 10px; 
+}
 #compte {
     display: flex;
     justify-content: center; 
