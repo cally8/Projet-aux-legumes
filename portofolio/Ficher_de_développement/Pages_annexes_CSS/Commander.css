@@ -103,34 +103,6 @@ h2 {
     margin: 10px
 }
 
-/* DYNAMISME PANIER */
-.panier {
-    position: relative;
-    text-align: right;
-}
-.panier {
-    position: relative;
-    text-align: right; 
-}
-.quantité {
-    background-color: aliceblue;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    top: -50px;
-    left: 80%;
-    padding: 3px 10px; 
-}
-.list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-    margin-top: 50px;
-}
-/* Dynamisme panier */
-
 
 /*  En-tête */
 
@@ -158,9 +130,9 @@ h1 {
 
 #produits {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(2,400px); 
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+    grid-template-rows: repeat(100px,1fr);
+    gap: 1.5rem;
     justify-content: space-between;
     align-content: space-around;
     background-color: rgb(218, 218, 218);
@@ -175,7 +147,7 @@ h1 {
     font-size: 1.5em;
     align-items: center;
     text-align: center;
-    white-space:inherit;
+    white-space:inherit; 
 }
 .bloc img {
     display: block;
@@ -185,16 +157,21 @@ h1 {
     object-fit: cover;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
     border: none;
-    /* margin: 0 auto; */
+}
 
+label {
+    display:flex; /* Afficher les étiquettes sur une même ligne */
+    margin: 18px; /* Espace entre les étiquettes */
 }
 
 input[type="number"] {
     background-color: rgb(217, 237, 255);
-    width: 20%;
+    width: 30%;
+    text-align: center;
     padding: 5px;
-    margin-bottom: 13px;
+    margin-bottom: 20px;
     box-sizing: border-box;
+    font-size: 1rem;
 }
 input[type="submit"] {
     background-color: rgb(217, 237, 255);
@@ -222,43 +199,113 @@ input[type="submit"] {
     padding: 10px;
     border-radius: 8px;
     font-size: 0.5em;
-    
+}
+p{
+    text-align: justify;
 }
 /*Le saviez-vous*/
 
-/*ajouter au PANIER*/
+/*Ajouter au PANIER*/
 .Panier {
-    display: flex;
-    width: 100%;
+    display: fixed;
+    top: 0;
+    right: 0; /*-100%*/
+    width: 85%;
+    min-height: 100vh;
+    padding: 20px;
     background-color: #dcdbdbee;
-    height: 70%;
-    transition: 0.5s;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
 }
-.Panier .checkout {
-    position: absolute;
-    bottom: 0;
-    width: 24.4%;
+.Panier.active {
+    right: 0; 
+} 
+.titre-panier {
+    text-align: center;
+    font-size: 1.5rem ;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+#liste-articles {
+    list-style: none;
+    padding: 0;
+}
+#liste-articles li {
+border-bottom: 1px solid #e5e7eb;
+padding: 5px;
+}
+.box-panier {
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
-}
-.Panier .checkout div{
-    background-color: aquamarine;
-    width: 100%;
-    height: 70px;
-    display:flex;
-    justify-content: center;
+    grid-template-columns: 32% 50% 18%;
     align-items: center;
-    font-weight: bold;
+    gap: 1rem;
+    margin-top: 1rem ;
+}
+.img-panier {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+.titre-produit-panier {
+    font-size: 1rem;
+    text-transform: uppercase;
+} 
+.prix-panier {
+    font-weight:500 ;
+}
+.quantite-panier {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+}
+.supp-article {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
-.Panier .checkout div:nth-child(2){
-    background-color: #1C1F25;
-    color: #fff;
-
+.total {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+    padding-top: 1rem;
 }
-.active .Panier {
-    left: calc(100% - 900px); 
+.titre-total {
+    font-size: 1rem;
+    font-weight: 600;
 }
+.prix-total {
+    margin-left: 0.5rem;
+}
+.btn-achat {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border:none;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-achat:hover {
+    background-color:rgb(104, 104, 104) ;
+}
+#fermer-panier {
+    position:absolute;
+    top: 5rem;
+    right: 1.2rem;
+    font-size: 2rem;
+    color: rgb(4, 4, 4);
+    cursor: pointer;
+}
+/* ajouter au panier */
 
 
 

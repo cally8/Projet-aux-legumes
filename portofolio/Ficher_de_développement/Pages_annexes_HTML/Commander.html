@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Pages_annexes_CSS/Commander.css">
+    <link rel="stylesheet" href="../Boxicons-master/css boxicons/boxicons.css">
     <title>COMMANDER</title>
 </head>
 <body>
@@ -21,9 +22,9 @@
                     <a class="un" href="./Nous_contacter.html">NOUS CONTACTER</a>
                 </div>
 
-                <div id="panier" class="shopping">
+                <div id="panier" class="shopping" onclick="ouvrir('unpanier')">
                     <a href="./Pages_annexes_HTML/Panier.html">PANIER
-                    <img src="../../Images/cart-shopping-solid.svg" alt="Panier"></a>
+                    <img src="../../Images/cart-shopping-solid.svg" alt="Panier" id="panierImg"></a>
                     <span class="quantité">0</span>
                     <div class="list"></div>    
                 </div>
@@ -42,33 +43,36 @@
 
     <main>
         <section id="main-contenu">
+
                 <section id="produits">
+                    <!-- Bloc 1-->
                     <div class="bloc" id="produit1">
                         <img src="../../Images/Avocats.jpg" alt="Avocats"> 
                         
                         <h1>Avocats</h1>
 
                         <span class="prix"> 0,75 €/pièce  </span>
+                        <!-- Information sur produit -->
                         <button onclick="afficherDetails('produit1')">Le saviez-vous ?</button>
                             <div class="culture" id="laCulture1">
                                 <div class="contenuCulture">
                                     <p>
-                                        L'avocat : COUPE-FAIM <br>
+                                        <strong>L'avocat : COUPE-FAIM</strong> <br>
                                         Il fournit des acides gras qui sont bénéfique pour les maladies cardiovasculaire. Riche en fibre, il favorise la satiété et la transite <br>
                                         La chaire doit être souple au niveau du pédoncule, sans point noirs. Il se conserve 5 jours à température ambiante. Lorsque vous l'ouvrez, citronner-le, car il noircit vite.
                                     </p>
                                     <button onclick="fermerLeContenu('produit1')" >Fermer</button>
                                 </div>
                             </div>
-
+                        <!-- Ajouter les produit au panier -->
                         <form onsubmit="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value)); return false;" method="post"> 
                             <label for="quantite1"></label>
                             <input type="number" name="Quantité" class="quantite1"  min="1" required>
-                            <button type="submit">Ajouter au panier</button>
+                            <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
-
                     </div>
 
+                    <!-- Bloc 2-->
                     <div class="bloc" id="produit2">
                         <img src="../../Images/Tomates.jpg" alt="Tomates">
 
@@ -79,7 +83,7 @@
                             <div class="culture" id="laCulture2">
                                 <div class="contenuCulture">
                                     <p>
-                                        La tomate : TOP POUR LA LIGNE <br>
+                                        <strong>La tomate : TOP POUR LA LIGNE</strong> <br>
                                         C'est un fruit pauvre en glucide et riche en eau, c'est donc un véritable allié minceur en plus de l'hydratation et l'élimination des toxines qu'elle procure.<br>
                                         Riche en lycopène, un puissant antioxydant qui aide à lutter contre le veillissement de la peau et des maladies diverses. <br>
                                         Conservez-la à température ambiante. ceuillie trop tôt et conservé au frais les rendent farineuse et sans gout. alors respecter la saison estivale ou elle sont plus juteuse et parfumée.
@@ -91,10 +95,11 @@
                         <form onsubmit="ajouterAuPanier('produit2', parseInt(document.querySelector('.quantite2').value)); return false;" method="post"> 
                             <label for="quantite2"></label>
                             <input type="number" name="Quantité" class="quantite2"  min="1" required>
-                            <button type="submit">Ajouter au panier</button>
+                            <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
                     </div>
 
+                    <!-- Bloc 3-->
                     <div class="bloc" id="produit3">
                         <img src="../../Images/Brocolis.jpg" alt="Brocolis">
 
@@ -105,7 +110,7 @@
                             <div class="culture" id="laCulture3">
                                 <div class="contenuCulture">
                                     <p>
-                                        Le brocoli : BON POUR LES YEUX <br>
+                                        <strong>Le brocoli : BON POUR LES YEUX</strong> <br>
                                         Ce légume renferme 5 fois plus de calcium que le chou-fleur. Indiqué en prévention des maladies cardiovasculaire et de certains cancers, il est aussi bénefique pour la santé des yeux car il renferme de la lutéine et du zéaxanthine, réputées pour baisser le risque de dégénérescence maculaire lié à l'âge.<br>
                                         Les fleurettes que l'on consomme sont en réalités des boutons floraux qui diuvent petre d'un vert uniforme, bien serrés et charnus. Consommez le brocoli dans les 4 jours suivant son achat et faite-le cuire à l'eau bouilllante, rôti au four ou mieux, à la vapeur pour préserver l'aliment. <br>
                                     </p>
@@ -116,10 +121,11 @@
                         <form onsubmit="ajouterAuPanier('produit3', parseInt(document.querySelector('.quantite3').value)); return false;" method="post"> 
                             <label for="quantite3"></label>
                             <input type="number" name="Quantité" id="quantite3"  min="1" required>
-                            <button type="submit">Ajouter au panier</button>
+                            <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
                     </div>
 
+                    <!-- Bloc 4-->
                     <div class="bloc" id="produit4">
                         <img src="../../Images/Raisin.jpg" alt="Raisin">
 
@@ -130,7 +136,7 @@
                             <div class="culture" id="laCulture4">
                                 <div class="contenuCulture">
                                     <p>
-                                        Le raisin : SOURCE DE POLYPHENOLS <br>
+                                        <strong>Le raisin : SOURCE DE POLYPHENOLS</strong> <br>
                                         Ils sont une excellente source d'antioxydants, tels que les polyphénols, qui contribuent à la prévention des maladies cardiovasculaires et au ralentissement du processus de vieillissement cellulaire. La richesse en fibres des raisins favorise une digestion saine, tout en régulant le taux de sucre dans le sang. Ces petits fruits sont également connus pour leurs propriétés anti-inflammatoires, bénéfiques pour la santé articulaire.<br>
                                         Pour conserver au mieux les raisins, il est essentiel de les stocker au réfrigérateur dans un sac perforé afin de maintenir une humidité adéquate. Il est recommandé de les laver juste avant de les consommer pour éviter l'humidité excessive, qui pourrait accélérer la détérioration. Les raisins peuvent également être congelés pour une conservation à plus long terme, idéale pour les smoothies ou les collations rafraîchissantes. Ainsi, en intégrant les raisins à une alimentation équilibrée et en suivant des pratiques de conservation appropriées, on peut profiter pleinement de leurs bienfaits pour la santé.
                                     </p>
@@ -141,10 +147,11 @@
                         <form onsubmit="ajouterAuPanier('produit4', parseInt(document.querySelector('.quantite4').value)); return false;" method="post"> 
                             <label for="quantite4"></label>
                             <input type="number" name="Quantité" id="quantite4"  min="1" required>
-                            <button type="submit">Ajouter au panier</button>
+                            <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                        </form>
                     </div>
 
+                    <!-- Bloc 5-->
                     <div class="bloc" id="produit5">
                         <img src="../../Images/Cougettes.jpg" alt="Courgettes">
 
@@ -155,7 +162,7 @@
                             <div class="culture" id="laCulture5">
                                 <div class="contenuCulture">
                                     <p>
-                                        La cougette : EXCELLENT DIURETIQUE<br>
+                                        <strong>La cougette : EXCELLENT DIURETIQUE</strong><br>
                                         Les courgettes, riches en nutriments et faibles en calories, leur contenu élevé en fibres favorise la digestion et contribue au maintien d'un poids corporel sain. Les courgettes sont également une source importante de vitamines, notamment la vitamine C, qui renforce le système immunitaire, et la vitamine A, bénéfique pour la santé des yeux. De plus, elles sont riches en antioxydants aux propriétés anti-inflammatoires, favorisant ainsi la santé cardiovasculaire.<br>
                                         Pour conserver au mieux les courgettes, il est recommandé de les stocker dans le bac à légumes du réfrigérateur. Elles sont sensibles à l'humidité, il est donc préférable de les conserver dans un sac en plastique perforé. Les courgettes peuvent également être congelées après avoir été blanchies, ce qui les rend pratiques pour une utilisation ultérieure dans des plats cuisinés. En incorporant régulièrement des courgettes dans son alimentation et en suivant des méthodes de conservation appropriées, on peut profiter pleinement de leurs bienfaits pour la santé.
                                     </p>
@@ -166,10 +173,11 @@
                             <form onsubmit="ajouterAuPanier('produit5', parseInt(document.querySelector('.quantite5').value)); return false;" method="post"> 
                                 <label for="quantite5"></label>    
                                 <input type="number" name="Quantité" id="quantite5"  min="1" required>
-                                <button type="submit">Ajouter au panier</button>
+                                <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                             </form>
                     </div>
 
+                    <!-- Bloc 6-->
                     <div class="bloc" id="produit6">
                         <img src="../../Images/Patates-douces.jpg" alt="Patates-douces">
 
@@ -180,7 +188,7 @@
                            <div class="culture" id="laCulture6">
                                 <div class="contenuCulture">
                                     <p>
-                                        La patate douce : BON POUR LA DIGESTION <br>
+                                        <strong>La patate douce : BON POUR LA DIGESTION </strong><br>
                                         La patate douce est une source exceptionnelle de nutriments, offrant des avantages pour la santé. Elle est riche en vitamine A, essentielle pour la vision, et en antioxydants qui renforcent le système immunitaire. Sa haute teneur en fibres favorise également une digestion saine. <br>
                                         Pour une conservation optimale, il est recommandé de conserver les patates douces dans un endroit frais, sombre et bien ventilé, évitant ainsi la réfrigération qui peut altérer leur texture. En intégrant régulièrement la patate douce dans son alimentation et en respectant les bonnes pratiques de conservation, on peut profiter de ses nombreux bienfaits nutritionnels.
                                     </p>
@@ -191,27 +199,160 @@
                         <form onsubmit="ajouterAuPanier('produit6', parseInt(document.querySelector('.quantite6').value)); return false;" method="post"> 
                             <label for="quantite6"></label>
                             <input type="number" name="Quantité" id="quantite6"  min="1" required>
-                            <button type="submit">Ajouter au panier</button>
+                            <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
                         
                     </div>
+
+                    <!-- Bloc 7 -->
+                    <div class="bloc" id="produit7">
+                        <img src="../../Images/Carrots.jpg" alt="des carottes">
+    
+                        <h1>Carottes </h1>
+
+                        <span class="prix"> 1,00 €/kg</span>
+                        <button onclick="afficherDetails('produit7')">Le saviez-vous ?</button>
+                           <div class="culture" id="laCulture7">
+                                <div class="contenuCulture">
+                                    <p>
+                                        <strong>La carotte : REGULE LE TRANSITE INTESTINAL</strong><br>
+                                        Riche en fibre, elle contribue à une sensation de satiété et régule le transit, éfficace contre la diarrhé (en soupe ou purée), mais aussi contre la constipation (crue). Sans compter sa forte teneur en bêtacarotène, qui lui confère de nombreux bienfait sur la vision et la peau.  <br>
+                                        Elle se conserve une semaine dans le bac à légume au réfrigérateur.Cuite, consommez-la dans la journée.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit7')" >Fermer</button>
+                                </div>
+                            </div>
+
+                        <form onsubmit="ajouterAuPanier('produit7', parseInt(document.querySelector('.quantite7').value)); return false;" method="post"> 
+                            <label for="quantite7"></label>
+                            <input type="number" name="Quantité" id="quantite7" min="1" required>
+                            <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
+                        </form>
+                    </div>
+    
+                    <!-- Bloc 8 -->
+                    <div class="bloc" id="produit8">
+                        <img src="../../Images/Betterave.jpg" alt="des betteraves">
+    
+                        <h1>Betterave </h1>
+                        <span class="prix"> 1,55 €/kg</span>
+                        <button onclick="afficherDetails('produit8')">Le saviez-vous ?</button>
+                           <div class="culture" id="laCulture8">
+                                <div class="contenuCulture">
+                                    <p>
+                                        <strong>La Betterave : BON POUR L'HYPERTENSION</strong> <br>
+                                        Riche en vitamine et en minéraux, elle stimule le système immunitaire afin d'aider le corps à lutter contre les infections et à maintenir une santé globale. Les antioxydants tels que la bétalaïne, aident à protéger les cellules des stress oxydatif, réduisant ainsi le risque de maladies chroniques.
+                                    </p>
+                                    <p>
+                                        Pour conserver les betteraves, retirez les feuilles, placez-les dans un sac perforé au réfrigérateur pour éviter l'humidité excessive, prolongeant ainsi leur fraîcheur. Vous pouvez également les conserver cuites sous forme de purée ou de tranches dans des récipients hermétiques au réfrigérateur pour une utilisation ultérieure.
+                                    </p>
+                                    <button onclick="fermerLeContenu('produit8')" >Fermer</button>
+                                </div>
+                            </div>
+    
+                        <form onsubmit="ajouterAuPanier('produit8', parseInt(document.querySelector('.quantite8').value)); return false;" method="post"> 
+                            <label for="quantite8"></label>
+                            <input type="number" name="Quantité" id="quantite8" min="1" required>
+                            <button class="ajouter-panier" type="submit">Ajouter au panier</button>
+                        </form>
+                    </div>
             </section>
 
+            <!-- Le panier -->
             <div class="Panier">
-                <h1>Panier</h1>
-                <ul class="listPanier"></ul>
-                <div class="checkout">
-                    <div class="total">0</div>
-                    <div class="fermerShopping">Fermer</div>
+                <h1 class="titre-panier">Votre panier</h1> 
+
+                <ul id="liste-articles"></ul>
+                <!-- contenu -->
+                <div class="contenu-panier">
+                    <!-- box 1 -->
+                    <div class="box-panier">
+                        <img src="../../Images/Avocats.jpg" alt="Avocats" class="img-panier">
+                        <div class="detail-box">
+                            <div class="titre-produit-panier">Avocat</div>
+                            <div class="prix-panier">$50</div> <!--<div>0,75 €/pièce</div> -->
+                            <input type="number" value="1" class="quantite-panier" min="1" required>
+                        </div>
+                         <!-- Retirer du panier -->
+                        <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                    </div>
+
+                    <!-- box 2 -->
+                    <div class="box-panier">
+                        <img src="../../Images/Tomates.jpg" alt="Tomates" class="img-panier">
+                        <div class="detail-box">
+                            <div class="titre-produit-panier">Tomates</div>
+                            <div class="prix-panier">$50</div> <!--<div>0,75 €/pièce</div> -->
+                            <input type="number" value="1" class="quantite-panier" min="1" required>
+                        </div>
+                         <!-- Retirer du panier -->
+                        <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                    </div>
+
+                    <!-- box 3 -->
+                    <div class="box-panier">
+                        <img src="../../Images/Brocolis.jpg" alt="Brocolis" class="img-panier">
+                        <div class="detail-box">
+                            <div class="titre-produit-panier">Brocolis</div>
+                            <div class="prix-panier">$50</div> <!--<div>0,75 €/pièce</div> -->
+                            <input type="number" value="1" class="quantite-panier" min="1" required>
+                        </div>
+                         <!-- Retirer du panier -->
+                        <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                    </div>
+
+                    <!-- box 4 -->
+                    <div class="box-panier">
+                        <img src="../../Images/Raisin.jpg" alt="Raisin" class="img-panier">
+                        <div class="detail-box">
+                            <div class="titre-produit-panier">Raisin</div>
+                            <div class="prix-panier">$50</div> <!--<div>0,75 €/pièce</div> -->
+                            <input type="number" value="1" class="quantite-panier" min="1" required>
+                        </div>
+                         <!-- Retirer du panier -->
+                        <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                    </div>
+
+                    <!-- box 5 -->
+                    <div class="box-panier">
+                        <img src="../../Images/Cougettes.jpg" alt="Courgettes" class="img-panier">
+                        <div class="detail-box">
+                            <div class="titre-produit-panier">Courgettes</div>
+                            <div class="prix-panier">$50</div> <!--<div>0,75 €/pièce</div> -->
+                            <input type="number" value="1" class="quantite-panier" min="1" required>
+                        </div>
+                         <!-- Retirer du panier -->
+                        <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                    </div>
+
+                    <!-- box 6 -->
+                    <div class="box-panier">
+                        <img src="../../Images/Patates-douces.jpg" alt="Patates-douces" class="img-panier">
+                        <div class="detail-box">
+                            <div class="titre-produit-panier">Patates douces</div>
+                            <div class="prix-panier">$50</div> <!--<div>0,75 €/pièce</div> -->
+                            <input type="number" value="1" class="quantite-panier" min="1" required>
+                        </div>
+                         <!-- Retirer du panier -->
+                        <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                    </div>
                 </div>
+
+                <!-- Total -->
+                <div class="total">
+                    <div class="titre-total">Total estimé : </div>
+                    <div class="prix-total">$0</div>
+                </div>
+                <!-- Bouton achat -->
+                <button type="button" class="btn-achat">Valider le panier </button>
+                <!-- Fermer le panier -->
+                <i class='bx bx-x' id="fermer-panier" onclick="fermer(event)"></i>
+             
             </div>
 
-            <script src="../proscript.js"></script>
-
-
+            <script src="../Pages_annexes_JS/Commander.js"></script>
         </section>
         
-
         <section id="bloc-fin">
             <div class="titre-footer">
                 <h5>Le site Aux légumes Bio</h5>
