@@ -27,17 +27,14 @@ function fermerLeContenu(produitId) {
     
 // };
 
-// panierIcon.onclick = ()=>{
-//     Panier.classList.add("active");
-// };
-// Fermer panier
-// fermerPanier.onclick = ()=> {
-//     Panier.classList.remove("active");
-// };
+panierIcon.onclick = ()=>{
+    Panier.classList.add("active");
+};
 
-//TESTER LA FONCION AVEC CA
-//var buttonClicked = event.target;
-//    buttonClicked.parentElement.remove();
+fermerPanier.onclick = ()=> {
+    Panier.classList.remove("active");
+};
+
 
 
 
