@@ -4,46 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Pages_annexes_CSS/Nous_contacter.css">
+    <link rel="stylesheet" href="../Boxicons-master/cssboxicons/boxicons.css">
     <title>NOUS CONTACTER</title>
 </head>
 <body>
     <header id="tete">
-        <div id="onglet">
-            <div id="Logo">
-                <img class="logo" src="../../Logo_AUX_LEGUMES/pinterest_board_photo_1.png" alt="Logo Aux legumes">
-            </div>
+        <nav>
+            <div id="onglet">
+                <div id="Logo">
+                    <img class="logo" src="../../Logo_AUX_LEGUMES/pinterest_board_photo_1.png" alt="Logo Aux legumes">
+                </div>
 
-            <div id="acceuil">
-                <a class="un" href="../projet.html">ACCEUIL</a>
-                <a class="un" href="./Pages_annexes_HTML/Calendrier-de-saison.html">CALENDRIER DE SAISON</a>
-                <a class="un" href="./Pages_annexes_HTML/Commander.html">COMMANDER</a>
-                <a class="un" href="#">NOUS CONTACTER</a>
-            </div>
+                <div id="acceuil">
+                    <a class="un" href="../projet.html">ACCEUIL</a>
+                    <a class="un" href="./Calendrier-de-saison.html">CALENDRIER DE SAISON</a>
+                    <a class="un" href="./Commander.html">COMMANDER</a>
+                    <a class="un" href="#">NOUS CONTACTER</a>
+                </div>
 
-            <div id="panier" class="shopping">
-                <a href="./Panier.html">PANIER
-                <img src="../../Images/cart-shopping-solid.svg" alt="Panier"></a>
-                <span class="quantité">0</span>
-                <div class="list"></div>    
-            </div>
+                <div id="compte">
+                    <a href="./Connecter.html">MON COMPTE
+                        <i class='bx bxs-user'></i></a>
+                </div>
 
-            <div id="compte">
-                <a href="./Pages_annexes_HTML/Connecter.html">MON COMPTE
-                <img src="../../Images/user-solid.svg" alt="bonhomme"></a>
+                <div id="info">
+                    <a href="./Plus_d_infos.html">+ INFOS</a>
+                </div>
             </div>
-
-            <div id="info">
-                <a href="./Pages_annexes_HTML/Plus-d-infos.html">+ INFOS</a>
-            </div>
-            
-        </div>
+        </nav>
     </header>
 
     <main>
+        <section id="bloc-container">
+            <h1>Laisser un commentaire</h1>
+            <div class="container">
+                <!-- Alert message -->
 
+                <!-- Form -->
+                <h2>Une question ? un conseil ?</h2>
+                <h3>Nous contacter</h3>
+
+                <form action="#" method="post" id="formulaire">
+                    <input type="text" name="Nom" placeholder="Nom">
+                    <input type="text" name="Prénom"  placeholder="Prénom"><br>
+                    <input type="email" name="Email"  placeholder="Email"><br>
+                    <textarea name="message" placeholder="Entrer votre message"></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+
+            </div>
+        </section>
 
         
-        <section id="bloc">
+        <section id="bloc-fin">
             <div class="titre-footer">
                 <h5>Le site Aux légumes Bio</h5>
             </div>

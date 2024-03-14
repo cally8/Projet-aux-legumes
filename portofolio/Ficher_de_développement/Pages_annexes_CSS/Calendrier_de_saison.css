@@ -34,7 +34,6 @@ body{
     font-weight: bold;
     font-size: 15px;
     background-color: rgb(165, 192, 165);
-    
 }
 
 #tete a {
@@ -46,7 +45,7 @@ body{
     font-weight: bold;
     font-size: 15px;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(7,1fr);
     justify-content: space-between; 
     align-content: space-around;
 }
@@ -82,12 +81,6 @@ body{
     padding: 0px;
 }
 
-#panier {
-    display: flex;
-    justify-content: center; /* Centre horizontalement le contenu */
-    align-items: center; /* Centre verticalement le contenu */
-    text-align: center;
-}
 #compte {
     display: flex;
     justify-content: center; 

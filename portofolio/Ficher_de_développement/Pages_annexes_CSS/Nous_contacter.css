@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto&display=swap');
+
+
 img {
     width: 25px;
     height: 25px;
@@ -11,11 +17,6 @@ body{
     border-style: solid;   /* */
     border-color: #e5e7eb;   /* */
 
-}
-
-*{
-    margin: 0; /* Permet d'éliminer les espaces inutiles entre les éléments */
-    padding: 0;
 }
 
 /*  EN-TÊTE */
@@ -39,7 +40,7 @@ body{
     font-weight: bold;
     font-size: 15px;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(7,1fr);
     justify-content: space-between; 
     align-content: space-around;
 }
@@ -75,12 +76,12 @@ body{
     padding: 0px;
 }
 
-#panier {
+/* #panier {
     display: flex;
-    justify-content: center; /* Centre horizontalement le contenu */
-    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center; Centre horizontalement le contenu 
+    align-items: center; Centre verticalement le contenu 
     text-align: center;
-}
+} */
 #compte {
     display: flex;
     justify-content: center; 
@@ -99,6 +100,112 @@ body{
 
 /*CORPS*/
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#bloc-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    color:  #000000ee;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+    margin: 15px 20px ;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 40%;
+    height: 90%;
+    background-color: lightgray;
+    border-radius: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border: none;
+}
+h2 {
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#formulaire {
+    display: contents;
+}
+
+input {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 10px 10px;
+    padding: 10px ;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.5s;
+}
+input:hover {
+    border: 1px solid;
+
+}
+
+textarea {
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100px;
+    margin: 10px 10px;
+    padding: 10px ;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 0.5s;
+}
+
+textarea:hover {
+    border: 1px solid;
+}
+
+button[type="submit"] {
+    width: 190px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    background-color: darkseagreen;
+    color: aliceblue;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    
+}
+
+
 #bloc-fin {
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -107,7 +214,6 @@ body{
     background-size: cover;
     text-align: center ;
     padding: 20px;
-    /*margin: 15px;*/
 }
 .titre-footer {
     grid-column: 1/ span 3;
@@ -148,7 +254,6 @@ h6 {
     align-content: space-around;
 }
 
-
 .lien-site {
     grid-column: 2;
     grid-row: 2/span 2;
@@ -182,3 +287,22 @@ address div a {
 }
 
 /*pied*/
+
+/*Responsive*/
+@media screen and (max-width: 500px) {
+
+    #onglet {
+        width: 100%;
+    }
+
+    #formulaire {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    input {
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
