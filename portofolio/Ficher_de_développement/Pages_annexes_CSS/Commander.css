@@ -1,0 +1,404 @@
+img {
+    width: 25px;
+    height: 25px;
+}
+
+body{
+    margin: 0; /* Va supprimer tout espace externe autour de l'élement */
+    background-color:aliceblue ;
+    box-sizing: border-box; /*Va modifier la façon dont la largeur et hauteur est organiser. Mais taille reste constant malgré bordure ou ajout contenu */
+    border-width: 0;   /*Supprime totalement la bordure de l'élément */
+    border-style: solid;   /* */
+    border-color: #e5e7eb;   /* */
+
+}
+
+*{
+    margin: 0; /* Permet d'éliminer les espaces inutiles entre les éléments */
+    padding: 0;
+}
+
+/*  EN-TÊTE */
+
+#tete {
+    height: 70px;
+    width: 100%;  /* en tete occupe toute la latgeur*/
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(165, 192, 165);
+
+}
+
+#tete a {
+    text-decoration: none; /* Supprime les soulignements des liens */
+}
+
+#onglet {
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+#onglet a {
+    color: black;
+}
+#onglet a:hover {
+    transform: scale(1.2); /* Augmentez la valeur pour un zoom plus important */
+}
+
+#Logo {
+    margin-left: auto;   /*Pour aligner l'image au centre */
+   /* margin-right: auto;*/
+
+}
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+#acceuil {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    grid-column: 2/span 4;
+
+}
+.un {
+    padding: 0px;
+}
+
+#panier {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    text-align: center;
+}
+#compte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h2 {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 15px;
+    text-align:justify;
+    align-items: center;
+    margin: 10px
+}
+
+
+/*  En-tête */
+
+/*CONTENUS*/
+h1 {
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+    margin: 20px
+}
+
+#main-contenu {
+    width:100%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* la premiere colonne est 3x plus large que la deuxième */
+    gap: 20px;
+    overflow-x: scroll;
+
+}
+
+#produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,auto));
+    grid-template-rows: repeat(100px,1fr);
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-content: space-around;
+    background-color: rgb(218, 218, 218);
+    background-size: cover;
+}
+
+
+.bloc {
+    background-color: aliceblue;
+    padding: 10px;
+    color: black;
+    font-size: 1.5em;
+    align-items: center;
+    text-align: center;
+    white-space:inherit; 
+}
+.bloc img {
+    display: block;
+    padding-top: 10px;
+    height:50%;
+    width: 100%; 
+    object-fit: cover;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 1);
+    border: none;
+}
+
+label {
+    display:flex; /* Afficher les étiquettes sur une même ligne */
+    margin: 18px; /* Espace entre les étiquettes */
+}
+
+input[type="number"] {
+    background-color: rgb(217, 237, 255);
+    width: 30%;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+input[type="submit"] {
+    background-color: rgb(217, 237, 255);
+    color: black;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* LE SAVIEZ-VOUS*/
+.culture {
+    display:none;
+    position: fixed;
+    top: 50%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.contenuCulture {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.5em;
+}
+p{
+    text-align: justify;
+}
+/*Le saviez-vous*/
+
+/*Ajouter au PANIER*/
+.Panier {
+    display: fixed;
+    top: 0;
+    right: 0; /*-100%*/
+    width: 85%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #dcdbdbee;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+}
+.Panier.active {
+    right: 0; 
+} 
+.titre-panier {
+    text-align: center;
+    font-size: 1.5rem ;
+    font-weight: 600;
+    margin-top: 2rem;
+}
+#liste-articles {
+    list-style: none;
+    padding: 0;
+}
+#liste-articles li {
+border-bottom: 1px solid #e5e7eb;
+padding: 5px;
+}
+.box-panier {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem ;
+}
+.img-panier {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+.titre-produit-panier {
+    font-size: 1rem;
+    text-transform: uppercase;
+} 
+.prix-panier {
+    font-weight:500 ;
+}
+.quantite-panier {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 2.4rem;
+    text-align: center;
+}
+.supp-article {
+    font-size: 32px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+.total {
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+    padding-top: 1rem;
+}
+.titre-total {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.prix-total {
+    margin-left: 0.5rem;
+}
+.btn-achat {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border:none;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-achat:hover {
+    background-color:rgb(104, 104, 104) ;
+}
+#fermer-panier {
+    position:absolute;
+    top: 5rem;
+    right: 1.2rem;
+    font-size: 2rem;
+    color: rgb(4, 4, 4);
+    cursor: pointer;
+}
+/* ajouter au panier */
+
+
+
+
+
+
+
+
+
+/*Contenus*/
+
+/*CORPS-FIN*/
+
+#bloc-fin {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(1, 100px);
+    background-color:rgb(56, 56, 56);
+    background-size: cover;
+    text-align: center ;
+    padding: 20px;
+    /*margin: 15px;*/
+}
+.titre-footer {
+    grid-column: 1/ span 3;
+    align-content: center;
+}
+h5 {
+    color:  #dcdbdbee;
+    font-family: 'Protest Revolution', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+h6 {
+    color:   #dcdbdbee;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+    margin: 20px;
+}
+.le-site {
+    grid-column: 1;
+    grid-row: 2/span 2;
+}
+.citation-texte {
+    border-top: 1px solid #dcdbdbee;
+    margin: 10px 0;
+    padding: 5px 0;
+    text-align: center;
+}
+.le-site p {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+.social-media img {
+    color: #dcdbdbee ;
+    align-content: space-around;
+}
+
+
+.lien-site {
+    grid-column: 2;
+    grid-row: 2/span 2;
+}
+.paragraphe {
+    padding: 10px;
+    color:  #dcdbdbee;
+}
+
+.contacter {
+    grid-column: 3;
+    grid-row: 2/span 2;
+}
+
+address div a {
+    color:  #dcdbdbee;
+}
+
+/*corps-fin*/
+
+/* PIED*/
+
+#pied{
+    display: flex;
+    height: 50px;
+    width: 100%; /* en tete occupe toute la latgeur*/
+    justify-content: center;   /* Centre horizontalement le contenu */
+    align-items: center;  /* Centre verticalement le contenu */
+    text-align: center; /* Centre le texte horizontalement */
+    background-color: rgb(165, 192, 165);
+}
+
+/*pied*/

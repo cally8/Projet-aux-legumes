@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+img {
+    width: 25px;
+    height: 25px;
+}
+
+
+/*  EN-TÊTE */
+
+#tete { 
+    height: 70px;
+    width: 100%;  /* en tete occupe toute la latgeur*/
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: rgb(165, 192, 165);
+    
+}
+
+#tete a {
+    text-decoration: none; /* Supprime les soulignements des liens */
+}
+
+#onglet {
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    justify-content: space-between; 
+    align-content: space-around;
+}
+
+#onglet a {
+    color: black;
+}
+#onglet a:hover {
+    transform: scale(1.2); /* Augmentez la valeur pour un zoom plus important */
+}
+
+#Logo {
+    margin-left: auto;   /*Pour aligner l'image au centre */
+   /* margin-right: auto;*/
+    
+}
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+#acceuil {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    text-align: center;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    grid-column: 2/span 4;
+
+}
+.un {
+    padding: 0px;
+}
+
+#panier {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
+    align-items: center; /* Centre verticalement le contenu */
+    text-align: center;
+}
+#compte {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+#info {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+   
+}
+/*  En-tête */
+
+/*CONTENU*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background: #96c3a2;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+    width: 760px;
+    max-width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 32, 63 , 45);
+}
+
+.form-container {
+    position: absolute;
+    top : 0;
+    height: 100%;
+    transition: .6s ease-in-out ;
+}
+
+.sign-up-container {
+    left: 0;
+    width: 50%;
+    z-index:1;
+    opacity: 0;
+}
+
+.container.panel-active .sign-up-container {
+    transform: translateX(100%);
+    z-index:5;
+    opacity: 1;
+    animation: show .6s;
+}
+
+@keyframes show {
+    0%, 49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%, 100%{
+        opacity: 1 ;
+        z-index: 5;
+    }
+}
+
+.container.panel-active .login-container {
+    transform: translateX(100%);
+}
+
+.login-container {
+    left: 0;
+    width: 50%;
+    z-index:2 ;
+}
+
+form {
+    background-color: rgb(243, 231, 216);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    background-color: #96c3a2;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+}
+
+button.ghost {
+    background-color: transparent;
+}
+
+button {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(236, 251, 246);
+    color: darkgreen;
+    border: 1px solid #e2ecff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 16px 32px;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border-color: black;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #74c188;
+    color: #e5e7eb;
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+.social-container {
+    margin: 24px 0;
+}
+
+.social-container a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10 14px;
+    height: 40px;
+    width:  40px;
+    border-radius: 50px;
+    background-color: #e5e7eb;
+    border: 1px solid rgba(0, 32, 63 , 45);
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding-top: 2.5rem;
+    color: aliceblue;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #000000ee;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+span {
+    font-size: 17px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 8px 0 16px;
+    color: darkgreen;
+}
+
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    transition: transform .6s ease-in-out;
+}
+
+.container.panel-active .overlay-container {
+    transform: translateX(-100%);
+}
+
+.overlay {
+    background: linear-gradient(to right, aliceblue, green) ;
+    background: #74c188;
+    color: black;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+
+.container.panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.overlay-panel {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
+
+.container.panel-active .overlay-left {
+    transform: translateX(0);
+}
+
+.overlay-right {
+    right:0;
+    transform: translateX(0);
+}
+
+.container.panel-active .overlay-right {
+    transform: translateX(20%);
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing:.5px;
+    margin: 20px 0 30px;
+    text-align: justify;
+}
