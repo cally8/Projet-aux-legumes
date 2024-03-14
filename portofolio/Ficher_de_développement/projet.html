@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,33 +8,38 @@
 </head>
 <body>
     <header id="tete">
-        <div id="onglet">
-            <div id="Logo">
-                <img class="logo" src="../Logo_AUX_LEGUMES/pinterest_board_photo_1.png" alt="Logo Aux legumes">
-            </div>
+        <nav>
+            <div id="onglet">
+                <div id="Logo">
+                    <img class="logo" src="../Logo_AUX_LEGUMES/pinterest_board_photo_1.png" alt="Logo Aux legumes">
+                </div>
 
-            <div id="acceuil">
-                <a class="un" href="#">ACCEUIL</a>
-                <a target="_blank" class="un" href="./Pages_annexes_HTML/Calendrier-de-saison.html">CALENDRIER DE SAISON</a>
-                <a target="_blank" class="un" href="./Pages_annexes_HTML/Commander.html">COMMANDER</a>
-                <a target="_blank" class="un" href="./Pages_annexes_HTML/Nous-contacter.html">NOUS CONTACTER</a>
-            </div>
+                <div id="acceuil">
+                    <a class="un" href="#">ACCEUIL</a>
+                    <a class="un" href="./Pages_annexes_HTML/Calendrier-de-saison.html">CALENDRIER DE SAISON</a>
+                    <a class="un" href="./Pages_annexes_HTML/Commander.html">COMMANDER</a>
+                    <a class="un" href="./Pages_annexes_HTML/Nous_contacter.html">NOUS CONTACTER</a>
+                </div>
 
-            <div id="panier">
-                <a target="_blank" href="./Pages_annexes_HTML/Panier.html">PANIER
-                <img src="../Images/cart-shopping-solid.svg" alt="Panier"></a>
-            </div>
+                <div id="panier" class="shopping">
+                    <a href="./Pages_annexes_HTML/Panier.html">PANIER
+                    <img src="../../Images/cart-shopping-solid.svg" alt="Panier"></a>
+                    <span class="quantité">0</span>
+                    <div class="list"></div>    
+                </div>
 
-            <div id="compte">
-                <a target="_blank" href="./Pages_annexes_HTML/Connecter.html">MON COMPTE
-                <img src="../Images/user-solid.svg" alt="bonhomme"></a>
-            </div>
+                <div id="compte">
+                    <a href="./Pages_annexes_HTML/Connecter.html">MON COMPTE
+                    <img src="../Images/user-solid.svg" alt="bonhomme"></a>
+                </div>
 
-            <div id="info">
-                <a target="_blank" href="./Pages_annexes_HTML/Plus-d-infos.html">+ INFOS</a>
+                <div id="info">
+                    <a href="./Pages_annexes_HTML/Plus_d_infos.html">+ INFOS</a>
+                </div>
+                
             </div>
-            
-        </div>
+        </nav>
+        
     </header>
 
     <main id="container">
@@ -71,8 +76,8 @@
                     <h4>Tomates</h4>
                     <span class="prix"> 3,99 €/kg  </span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite1">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value));"  method="post"> 
+                        <label for="quantite1"></label>
                         <input type="number" name="Quantité" id="quantite1"  min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -85,8 +90,8 @@
                     <h4> Avocats</h4>
                     <span class="prix"> 0,75 €/pièce</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite2">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit2', parseInt(document.querySelector('.quantite2').value)); return false;" method="post"> 
+                        <label for="quantite2"></label>
                         <input type="number" name="Quantité" id="quantite2" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -99,8 +104,8 @@
                     <h4>Raisins </h4>
                     <span class="prix"> 1,25 €/kg </span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite3">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit3', parseInt(document.querySelector('.quantite3').value)); return false;" method="post"> 
+                        <label for="quantite3"></label>
                         <input type="number" name="Quantité" id="quantite3" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -113,8 +118,8 @@
                     <h4>Courgettes </h4>
                     <span class="prix"> 0,70 €/pièce</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite4">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit4', parseInt(document.querySelector('.quantite4').value)); return false;" method="post"> 
+                        <label for="quantite4"></label>
                         <input type="number" name="Quantité" id="quantite4" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -127,8 +132,8 @@
                     <h4>Patates douces </h4>
                     <span class="prix"> 0,99 €/kg</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite5">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit5', parseInt(document.querySelector('.quantite5').value)); return false;"method="post"> 
+                        <label for="quantite5"></label>
                         <input type="number" name="Quantité" id="quantite5" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -141,8 +146,8 @@
                     <h4>Brocolis </h4>
                     <span class="prix"> 0,80 €/kg</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite6">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit6', parseInt(document.querySelector('.quantite6').value)); return false;" method="post"> 
+                        <label for="quantite6"></label>
                         <input type="number" name="Quantité" id="quantite6" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -155,8 +160,8 @@
                     <h4>Carottes </h4>
                     <span class="prix"> 1,00 €/kg</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite7">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit7', parseInt(document.querySelector('.quantite7').value)); return false;" method="post"> 
+                        <label for="quantite7"></label>
                         <input type="number" name="Quantité" id="quantite7" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -169,8 +174,8 @@
                     <h4>Betterave </h4>
                     <span class="prix"> 1,55 €/kg</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite8">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit8', parseInt(document.querySelector('.quantite8').value)); return false;" method="post"> 
+                        <label for="quantite8"></label>
                         <input type="number" name="Quantité" id="quantite8" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -183,8 +188,8 @@
                     <h4>Topinambours </h4>
                     <span class="prix"> 0,60 €/pièce</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite9">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit9', parseInt(document.querySelector('.quantite9').value)); return false;" method="post"> 
+                        <label for="quantite9"></label>
                         <input type="number" name="Quantité" id="quantite9" min="1" required>
 
                         <input type="submit" value="Ajouter au panier">
@@ -192,13 +197,13 @@
                 </div>
 
                 <div class="produit">
-                    <img src="../Images/Épinards-500g.jpg" alt="des épinards">
+                    <img src="../Images/Épinards 500g.jpg" alt="des épinards">
 
                     <h4>Epinards </h4>
                     <span class="prix"> 2,70 €/kg</span>
 
-                    <form action="quantité-produit" method="post"> 
-                        <label for="quantite10">Quantité : </label>
+                    <form onsubmit="ajouterAuPanier('produit10', parseInt(document.querySelector('.quantite10').value)); return false;" method="post"> 
+                        <label for="quantite10"></label>
                         <input type="number" name="Quantité" id="quantite10" min="1" required>
                         <input type="submit" value="Ajouter au panier">
                     </form>

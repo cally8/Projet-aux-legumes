@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Pages_annexes_CSS/Connecter.css">
+    <link rel="stylesheet" href="../Boxicons-master/css boxicons/boxicons.css">
     <title>SE CONNECTER</title>
 </head>
 <body>
-    
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Créer un compte</h1>
+
+                <div class="social-container">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-google-plus-circle'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+
+                <span>Utiliser un compte Gmail</span>
+                <input type="text" placeholder="Nom">
+                <input type="Email" placeholder="Email">
+                <input type="Mot de passe" placeholder="Mot de passe">
+                <button>Créer un compte</button>
+            </form>
+        </div>
+
+        <div class="form-container login-container">
+            <form action="#">
+                <h1>Se connecter</h1>
+
+                <div class="social-container ">
+                    <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                    <a href="#"><i class='bx bxl-google-plus-circle'></i></a>
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                </div>
+
+                <span>Je n'ai pas de compte</span>
+                <input type="Email" placeholder="Email">
+                <input type="Mot de passe" placeholder="Mot de passe">
+                <button>Se connecter</button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Lorem ipsum</h1>
+                    <p>Un paragraphe est une section de texte en prose vouée au développement d'un point particulier souvent au moyen de plusieurs phrases, dans la continuité du précédent et du suivant. Sur le plan typographique, le paragraphe est compris entre deux alinéas, qui s'analysent aussi comme une « ponctuation blanche</p>
+                    <button class="ghost" id="login">Se connecter</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Lorem ipsum</h1>
+                    <p>Un paragraphe est une section de texte en prose vouée au développement d'un point particulier souvent au moyen de plusieurs phrases, dans la continuité du précédent et du suivant. Sur le plan typographique, le paragraphe est compris entre deux alinéas, qui s'analysent aussi comme une « ponctuation blanche</p>
+                    <button class="ghost" id="signUp">Créer un compte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Pages_annexes_JS/connecter.js"></script>
 </body>
 </html>
