@@ -14,50 +14,84 @@ function fermerLeContenu(produitId) {
 };
 
 //Ajouter au PANIER
+// let panier = [];
+// let total = 0;
 
-//Panier
- let panierIcon = document.querySelector("#panier");
- let Panier = document.querySelector(".Panier");
- let fermerPanier = document.querySelector("#fermer-panier");
-//Ouvrir panier 
-//essai 3
-// fermerPanier.onferme = (event) =>{
-//     var buttonClicked = event.target;
-//     Panier.classList.add("active");
-    
-// };
+// function ajouterAuPanier(produitId, prix, quantite, titre, image) {
+//     const produit = document.getElementById(produitId);
+//     const nomProduit = produit.querySelector('h2').innerText;
+//     const prixTotalProduit = prix * quantite;
 
-panierIcon.onclick = ()=>{
-    Panier.classList.add("active");
+//     panier.push({ nomProduit, prixTotalProduit, quantite, titre, image });
+//     total += prixTotalProduit;
+
+//     afficherPanier();
+
+//     console.log("Panier:", panier)
+// }
+
+// function afficherPanier() {
+//     const panierListe = document.getElementById('liste-panier');
+//     const totalElement = document.getElementById('prix-total');
+
+//     // Effacer le contenu précédent
+//     panierListe.innerHTML = '';
+
+//     // Ajouter les articles au panier
+//     panier.forEach(item => {
+//         const li = document.createElement('li');
+//         li.innerHTML = `
+//             <img src="${item.image}" alt="${item.nomProduit}">
+//             <span>${item.nomProduit} - ${item.prixTotalProduit.toFixed(2)} - Quantité: ${item.quantite}</span>
+//         `;
+//         li.textContent = `${item.article} - $${item.prix.toFixed(2)}`;
+//         panierListe.appendChild(li);
+//     });
+
+//     // Mettre à jour le total
+//     totalElement.textContent = total.toFixed(2);
+// }
+
+
+
+
+
+//Panier dynamique
+ let cartIcon = document.querySelector("#cart-icon");
+ let cart = document.querySelector(".cart");
+ let closeCart = document.querySelector("#fermer-panier");
+
+ //Ouvrir panier
+cartIcon.onclick = () => {
+    cart.classList.add("active");
+};
+//Fermer panier
+closeCart.onclick = () => {
+    cart.classList.remove("active");
 };
 
-fermerPanier.onclick = ()=> {
-    Panier.classList.remove("active");
-};
 
-
-
-
-//Supprimer une article du panier
+//Chargement du ficher
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded',ready);
 }else{
     ready();
 };
+
 // fonctionnement suppression
 function ready(){
-    var btnSuppPanier = document.getElementsByClassName("supp-article");
+    var btnSuppPanier = document.getElementsByClassName('supp-article');
     // Ajouter un evenement pour chaque icon poubelle pour appeler la fonction btnSuppPanier 
     console.log(btnSuppPanier);
     for(var i = 0; i < btnSuppPanier.length; i++) {
-        var poubelle = btnSuppPanier[i];
-        poubelle.addEventListener('click', removeCartItem);
+        var poubelleBtn = btnSuppPanier[i];
+        poubelleBtn.addEventListener('click', removeCartItem);
     }
-    //Change la quantité
-    var quantiteInput = document.getElementsByClassName('quantite-panier');
-    for (var i = 0; i < quantiteInput.length; i++) {
-        var input = quantiteInput[i];
-        input.addEventListener('change', quantiteChanger);
+    //Changer la quantité
+    var quantityInput = document.getElementsByClassName('cart-quantity');
+    for (var i = 0; i < quantityInput.length; i++) {
+        var inputs = quantityInput[i];
+        inputs.addEventListener('change', quantityChanged);
     }
 };
 
@@ -65,37 +99,55 @@ function ready(){
 function removeCartItem (event){
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
+
     updatetotal();
 };
 //Change quantite
-function quantiteChanger (event) {
+function quantityChanged (event) {
     var input = event.target;
-        if (isNaN(input.value) || input.valut <= 0) {
+        if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
     updatetotal();
 }
 
 function updatetotal() {
-    var contenuPanier = document.getElementsByClassName("contenu-panier") [0];
-    var panierBoxes = contenuPanier.getElementsByClassName("box-panier");
+    var cartContent = document.getElementsByClassName("cart-content") [0];
+    var cartBoxes = cartContent.getElementsByClassName("cart-box");
     var total = 0; 
 
-    for(var i = 0; i < panierBoxes.length; i++) {
-        var boxPanier = panierBoxes[i];
-        var prixElement = boxPanier.getElementsByClassName("prix-panier") [0];
-        var quantiteElement = boxPanier.getElementsByClassName("quantite-panier") [0];
+    for(var i = 0; i < cartBoxes.length; i++) {
+        var cartBox = cartBoxes[i];
+        var priceElement = cartBox.getElementsByClassName("cart-price") [0];
+        var quantityElement = cartBox.getElementsByClassName("cart-quantity") [0];
+        var price = parseFloat(priceElement.innerText.replace(" $", ""));
+        var quantity = quantityElement.value;
+        // var quantity = parseInt(quantityElement.value);
+
+        total = total + (price * quantity);
+
+        document.getElementsByClassName('prix-total')[0].innerText = "$" + total;
     
         //Récupération du prix et de la quantité
-        var prix = parseFloat(prixElement.innerText.replace(" $", ""));
-        var quantite = parseInt(quantiteElement.value);
+        // var prix = parseFloat(priceElement.innerText.replace(" $", ""));
+        // var quantite = parseInt(quantityElement.value);
 
-        total = total + (prix*quantite);// total += prix * quantite;
+        // console.log ("Prix:", prix, "Quantité:", quantite);
 
-        // Mettre à jour le prix total à l'extérieur de la boucle
-        document.getElementsByClassName("prix-total")[0].innerText = total.toFixed(2) + " $" ;
-
+        // // Vérification de la quantité avant de calculer
+        // if (!isNaN(prix) && !isNaN(quantite) && quantite > 0) {
+        //     total += prix * quantite;
+        // }
     }
+
+    // console.log("Total avant mise à jour:", total);
+
+    // Mettre à jour le prix total à l'extérieur de la boucle
+    // document.getElementsByClassName("prix-total")[0].innerText = total.toFixed(2) + " $" ; a activer
+    // var prixTotalElement = document.getElementsByClassName("prix-total")[0];
+    // prixTotalElement.innerText = "$" + total.toFixed(2);
+    
+    // console.log("Total après mise à jour:",total);
 
 };
 

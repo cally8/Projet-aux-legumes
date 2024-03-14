@@ -1,3 +1,8 @@
+/* POLICES */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 img {
     width: 25px;
@@ -40,7 +45,7 @@ body{
     font-weight: bold;
     font-size: 15px;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(7,1fr);
     justify-content: space-between; 
     align-content: space-around;
 }
@@ -76,12 +81,12 @@ body{
     padding: 0px;
 }
 
-#panier {
+/* #panier {
     display: flex;
-    justify-content: center; /* Centre horizontalement le contenu */
-    align-items: center; /* Centre verticalement le contenu */
+    justify-content: center;  Centre horizontalement le contenu 
+    align-items: center;  Centre verticalement le contenu 
     text-align: center;
-}
+} */
 #compte {
     display: flex;
     justify-content: center; 
@@ -119,7 +124,7 @@ h1 {
     font-size: 2rem;
 }
 
-p {
+.para {
     padding: 15px;
     text-align: justify;
     font-size: 1.25rem;
@@ -157,7 +162,6 @@ li {
     background-size: cover;
     text-align: center ;
     padding: 20px;
-    /*margin: 15px;*/
 }
 .titre-footer {
     grid-column: 1/ span 3;

@@ -34,7 +34,7 @@ body{
     font-weight: bold;
     font-size: 15px;
     background-color: rgb(165, 192, 165);
-    
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
 }
 
 #tete a {
@@ -46,7 +46,7 @@ body{
     font-weight: bold;
     font-size: 15px;
     display: grid;
-    grid-template-columns: repeat(8,1fr);
+    grid-template-columns: repeat(7,1fr);
     justify-content: space-between; 
     align-content: space-around;
 }
@@ -60,8 +60,6 @@ body{
 
 #Logo {
     margin-left: auto;   /*Pour aligner l'image au centre */
-   /* margin-right: auto;*/
-    
 }
 .logo {
     width: 70px;
@@ -80,13 +78,6 @@ body{
 }
 .un {
     padding: 0px;
-}
-
-#panier {
-    display: flex;
-    justify-content: center; /* Centre horizontalement le contenu */
-    align-items: center; /* Centre verticalement le contenu */
-    text-align: center;
 }
 
 #compte {
@@ -261,20 +252,21 @@ label {
     display:flex; /* Afficher les étiquettes sur une même ligne */
     margin-bottom: 8px; /* Espace entre les étiquettes */
 }
-input[type="number"] {
+/* input[type="number"] {
     background-color: rgb(217, 237, 255);
-    width: 20%; /* Remplir la largeur du conteneur parent */
-    padding: 5px; /* Ajouter un espace intérieur aux champs de saisie */
-    margin-bottom: 13px; /* Espace entre les champs de saisie */
-    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
-}
-input[type="submit"] {
+    width: 20%;  Remplir la largeur du conteneur parent 
+    padding: 5px;  Ajouter un espace intérieur aux champs de saisie 
+    margin-bottom: 13px;  Espace entre les champs de saisie 
+    box-sizing: border-box;  Inclure le padding et la bordure dans la largeur totale 
+} */
+input[type="button"] {
     background-color: rgb(217, 237, 255);
     color: black;
     padding: 5px 10px; /* Ajouter de l'espace intérieur au bouton */
     border: none; /* Supprimer la bordure par défaut du bouton */
-    border-radius: 4px; /* Ajouter des coins arrondis au bouton */
+    border-radius: 4px; /* Ajosuter des coins arrondis au bouton */
     cursor: pointer; /* Afficher un curseur pointeur au survol du bouton */
+    margin-top: 10px;
 }
 
 #bloc4 { /*Contenu de la newletter*/
@@ -320,7 +312,6 @@ input[type="submit"] {
     background-size: cover;
     text-align: center ;
     padding: 20px;
-    /*margin: 15px;*/
 }
 .titre-footer {
     grid-column: 1/ span 3;
@@ -360,7 +351,6 @@ h6 {
     color: #dcdbdbee ;
     align-content: space-around;
 }
-
 
 .lien-site {
     grid-column: 2;
