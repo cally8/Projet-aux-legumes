@@ -310,8 +310,8 @@ input[type="submit"] {
     text-align: center;
     font-size: 1rem;
 }
-.supp-article {
-    font-size: 32px;
+.bxs-trash-alt {
+    font-size: 22px;
     color: rgb(0, 0, 0);
     cursor: pointer;
 }

@@ -110,7 +110,7 @@ body {
     max-width: 100%;
     background-color: #e5e7eb;
     border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 32, 63 , 45);
+    box-shadow: 0 8px 24px rgba(0, 32, 63 );
 }
 
 .form-container {
@@ -211,12 +211,12 @@ button:active {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 10 14px;
+    margin: 10px 14px;
     height: 40px;
     width:  40px;
     border-radius: 50px;
     background-color: #e5e7eb;
-    border: 1px solid rgba(0, 32, 63 , 45);
+    border: 1px solid rgba(0, 32, 63 );
 }
 
 h1 {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,10 +50,10 @@
                                 <input type="number" value="1" class="cart-quantity" min="1" required>
                             </div>
                             <!-- Retirer du panier -->
-                            <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i>
+                            <i class='bx bxs-trash-alt'  onclick="removeCartItem(event)" ></i>
                         </div>
 
-                         <!-- box 2 -->
+                        <!-- box 2 -->
                         <div class="cart-box"> 
                             <img src="../../Images/Tomates.jpg" alt="Tomates" class="cart-img">
                             <div class="box-detail">
@@ -62,7 +62,7 @@
                                 <input type="number" value="1" class="cart-quantity" min="1" required>
                             </div>
                             <!-- Retirer du panier -->
-                            <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                            <i class='bx bxs-trash-alt'  onclick="removeCartItem(event)" ></i> 
                         </div>
 
                         <!-- box 3 -->
@@ -74,7 +74,7 @@
                                 <input type="number" value="1" class="cart-quantity" min="1" required>
                             </div>
                             <!-- Retirer du panier -->
-                            <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                            <i class='bx bxs-trash-alt'  onclick="removeCartItem(event)" ></i> 
                         </div>
 
                         <!-- box 4 -->
@@ -86,7 +86,7 @@
                                 <!-- <input type="number" value="1" class="cart-quantity" min="1" required>
                             </div> -->
                             <!-- Retirer du panier -->
-                            <!-- <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                            <!-- <i class='bx bxs-trash-alt'  onclick="removeCartItem(event)" ></i> 
                         </div> -->
 
                         <!-- box 5 -->
@@ -98,7 +98,7 @@
                                 <!-- <input type="number" value="1" class="cart-quantity" min="1" required>
                             </div> -->
                             <!-- Retirer du panier -->
-                            <!-- <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                            <!-- <i class='bx bxs-trash-alt'  onclick="removeCartItem(event)" ></i> 
                         </div> -->
 
                         <!-- box 6 -->
@@ -110,7 +110,7 @@
                                 <!-- <input type="number" value="1" class="cart-quantity" min="1" required>
                             </div> -->
                             <!-- Retirer du panier -->
-                            <!-- <i class='bx bxs-trash-alt' class="supp-article" onclick="removeCartItem(event)" ></i> 
+                            <!-- <i class='bx bxs-trash-alt'  onclick="removeCartItem(event)" ></i> 
                         </div> -->
                     </div>
 
@@ -130,7 +130,7 @@
     </header>
 
     <main>
-        <section id="main-contenu">
+        <div id="main-contenu">
             <section id="produits">
                     <!-- <h1>Nos produits</h1> -->
 
@@ -154,8 +154,7 @@
                                 </div>
                             </div>
                         <!-- Ajouter les produit au panier -->
-                        <form onsubmit="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value)); return false;" method="post"> 
-                            <label for="quantite1"></label>
+                        <form onsubmit="ajouterAuPanier('produit1', parseInt(document.querySelector('.quantite1').value)); return false;" method="post">
                             <input type="number" name="Quantité" class="quantite1"  min="1" required>
                             <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
@@ -182,7 +181,6 @@
                             </div>
 
                         <form onsubmit="ajouterAuPanier('produit2', parseInt(document.querySelector('.quantite2').value)); return false;" method="post"> 
-                            <label for="quantite2"></label>
                             <input type="number" name="Quantité" class="quantite2"  min="1" required>
                             <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
@@ -208,7 +206,6 @@
                             </div>
 
                         <form onsubmit="ajouterAuPanier('produit3', parseInt(document.querySelector('.quantite3').value)); return false;" method="post"> 
-                            <label for="quantite3"></label>
                             <input type="number" name="Quantité" id="quantite3"  min="1" required>
                             <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
@@ -234,7 +231,7 @@
                             </div>
 
                         <form onsubmit="ajouterAuPanier('produit4', parseInt(document.querySelector('.quantite4').value)); return false;" method="post"> 
-                            <label for="quantite4"></label>
+                            <!-- <label for="quantite4"></label> -->
                             <input type="number" name="Quantité" id="quantite4"  min="1" required>
                             <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                        </form>
@@ -260,7 +257,7 @@
                             </div>
 
                             <form onsubmit="ajouterAuPanier('produit5', parseInt(document.querySelector('.quantite5').value)); return false;" method="post"> 
-                                <label for="quantite5"></label>    
+                                <!-- <label for="quantite5"></label>     -->
                                 <input type="number" name="Quantité" id="quantite5"  min="1" required>
                                 <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                             </form>
@@ -286,7 +283,7 @@
                             </div>
 
                         <form onsubmit="ajouterAuPanier('produit6', parseInt(document.querySelector('.quantite6').value)); return false;" method="post"> 
-                            <label for="quantite6"></label>
+                            <!-- <label for="quantite6"></label> -->
                             <input type="number" name="Quantité" id="quantite6"  min="1" required>
                             <button class ="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
@@ -340,8 +337,7 @@
                             </div>
     
                         <form onsubmit="ajouterAuPanier('produit8', parseInt(document.querySelector('.quantite8').value)); return false;" method="post">
-                        <form onsubmit="ajouterAuPanier('produit8', 1.55, parseInt(document.getElementById('quantite8').value), 'Betterave', '../../Images/Betterave.jpg'); return false;" method="post">
-                            <label for="quantite8"></label>
+                            <!-- <label for="quantite8"></label> -->
                             <input type="number" name="Quantité" id="quantite8" min="1" required>
                             <button class="ajouter-panier" type="submit">Ajouter au panier</button>
                         </form>
@@ -349,7 +345,7 @@
             </section>
 
             <script src="../Pages_annexes_JS/Commander.js"></script>
-        </section>
+        </div>
         
         <section id="bloc-fin">
             <div class="titre-footer">

@@ -15,8 +15,8 @@ body{
     background-color:aliceblue ;
     box-sizing: border-box; /*Va modifier la façon dont la largeur et hauteur est organiser. Mais taille reste constant malgré bordure ou ajout contenu */
     border-width: 0;   /*Supprime totalement la bordure de l'élément */
-    border-style: solid;   /* */
-    border-color: #e5e7eb;   /* */
+    border-style: solid; 
+    border-color: #e5e7eb;   
 
 }
 
@@ -202,8 +202,8 @@ h4 {
     overflow-x: scroll; /* Barre de défilement x pour quand ça déborde*/
     overflow-y: hidden; 
     white-space: nowrap; /*définit coment les espaces blancs sont OQP par le texte. Le texte sera sur 1 ligne meme si dépasse */
-    scroll-snap-type: x mandatory; /*elle indique que le défilement horizontal (axe x) doit "accrocher" sur les points de défilement, créant une expérience de défilement plus fluide et contrôlée*/
-    width: 100%;
+    scroll-snap-type: x mandatory; /*elle indique que le défilement horizontal (axe x) doit "accrocher" sur les points de défilement, */
+    width: 100%;                   /* créant une expérience de défilement plus fluide et contrôlée*/
 }
 #bloc3 .produit {
     height: 300px;
